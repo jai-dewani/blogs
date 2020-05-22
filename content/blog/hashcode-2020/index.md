@@ -1,5 +1,5 @@
 ---
-title: HashCode 2020 Experience and how to approach it
+title: HashCode 2020 Experience and how to approach it for the first time
 date: "2020-02-22T22:12:03.284Z"
 description: "My experience participating in Google HashCode 2020 for the first time and the takeaways I got from participating in it which might help you when participating for the first time"
 ---
