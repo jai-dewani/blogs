@@ -3,7 +3,7 @@ module.exports = {
     title: `Blogs By Jai-D`,
     author: {
       name: `Jai Kumar Dewani`,
-      summary: `who is still figuring out and developing this intrest in development :p.`,
+      summary: `who is still figuring out and developing his intrest in development :p.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
