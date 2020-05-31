@@ -4,7 +4,11 @@ date: "2020-02-22T22:12:03.284Z"
 description: This is a new library funmark that I am working on right now which allows uses to calculate runtime and memory usage their functions and plot these results comparing their performance with other similar functions"
 ---
 
+![funmark](images/funmark.png)
+
 Before starting the blog I wanted to say that this is my first pypi package and it is still in development phase so if anyone finds it intresting, make sure to checkout funmark in [github](https://github.com/jai-dewani/fun-mark)
+
+Funmark is a python package which can be used for fuction benchmarking and then to analyze/compare their runtime and memory consumption using graph plots. 
 
 In this blog I will be using my funmark package to benchmark sorting functions, mainly
 - QuickSort
