@@ -3,6 +3,9 @@ title: Using funmark to benchmark python function and plot results
 date: "2020-02-22T22:12:03.284Z"
 description: This is a new library funmark that I am working on right now which allows uses to calculate runtime and memory usage their functions and plot these results comparing their performance with other similar functions"
 ---
+
+Before starting the blog I wanted to say that this is my first pypi package and it is still in development phase so if anyone finds it intresting, make sure to checkout funmark in [github](https://github.com/jai-dewani/fun-mark)
+
 In this blog I will be using my funmark package to benchmark sorting functions, mainly
 - QuickSort
 - MergeSort
@@ -145,4 +148,6 @@ Here I am plotting the graph of memory with *merge* and passing *quick* and *tim
 
 The plot for QuickSort is just below the TimSort plot hence it isn't clearly visible in this plot but from this we can understand that MergeSort requires extra space where as QuickSort and TimSort don't!
 
-This was just a simple analysis of Sorting Algorithms but funmark can be used to do benchmark and analysis for any python code as long as it can be writter in a function!
+This was just a simple analysis of Sorting Algorithms but funmark can be used to do benchmark and analysis for any python code as long as it can be writter in a function.
+
+If you liked what this library can do then check it out on [github](https://github.com/jai-dewani/fun-mark) and drop a star and look into issue tab if you want to contribute!
