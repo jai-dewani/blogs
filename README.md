@@ -1,3 +1,4 @@
+![CI](https://github.com/jai-dewani/blogs/workflows/CI/badge.svg?branch=master)
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
