@@ -7,7 +7,7 @@ description: "In this blog I will be discussing the steps I followed to host my 
 In this blog I will be covering the steps I took to host my project '[DeepNeuralNetwork](https://github.com/jai-dewani/DeepNeural-Net-Visualiser)' on Heroku. I used Flask to power a keras model and serve its output as an API which I consumed using streamlit while create responsive, fast and clean UI
 
 # A bit about Heroku  
-Everying in heroku is an **app** which can be deoployed to **[dyons](https://www.heroku.com/dynos)** which are basically light weight linux containers which can host your app It uses container-based architecture to host apps, which means you can easily scale up your apps by increase the number of containers to balance out the load!  
+Everying in Heroku is an **app** which can be deoployed to **[dyons](https://www.heroku.com/dynos)** which are basically light weight linux containers which can host your app It uses container-based architecture to host apps, which means you can easily scale up your apps by increase the number of containers to balance out the load!  
 When you sign up with Heroku, you automatically get some free dyno hours, a sort of currency which can be used to run your apps in dynos. When your app runs, it consumes dyno hours. And when your app is idle for 30 minutes or more it automatically sleeps to stop consuming dyno hours. Don't worry it will take up automatically if you give it any task to do (might take a few seconds to warm up)
 
 They also provide a free tier service and its main features are:
@@ -23,16 +23,16 @@ They also provide a free tier service and its main features are:
 # Setting up Heroku CLI
 I am assuming that you have made an account on Heroku.
 
-Before starting any sort of deployment you need to setup heroku cli to be able to push your code directly to heroku from [here](https://devcenter.heroku.com/articles/heroku-cli#download-and-install) after downloading and installing heroku cli, open your terminal/cmd and type
+Before starting any sort of deployment you need to setup Heroku cli to be able to push your code directly to Heroku from [here](https://devcenter.heroku.com/articles/heroku-cli#download-and-install) after downloading and installing Heroku cli, open your terminal/cmd and type
 ```
 heroku login
 ```
-which should promote you to login to heroku on a browser, after successfully loging in you shoud something like 
+which should promote you to login to Heroku on a browser, after successfully loging in you shoud something like 
 ```
 Logging in... done
 Logged in as me@example.com
 ```
-on your terminal. This means you have completed the 1<sup>st</sup> step of learning to host on heroku
+on your terminal. This means you have completed the 1<sup>st</sup> step of learning to host on Heroku
 
 
 # Hosting flask + keras model
@@ -43,8 +43,8 @@ You will mainly need the following files to host your application on Heroku
 - requirements.txt     
 
 After which you will have to do the following steps
-- Create an heroku app
-- Pushing your code to heroku server
+- Create an Heroku app
+- Pushing your code to Heroku's server
 
 
 ### Create your flask app  
@@ -92,7 +92,7 @@ if __name__=="__main__":
 ```
 
 ### Create *Procfile*  
-Yes it has no extensions, so avoid adding any. The `Procfile` is used by heroku's dynos to understand what commands are to be run on start up of application. 
+Yes it has no extensions, so avoid adding any. The `Procfile` is used by Heroku's dynos to understand what commands are to be run on start up of application. 
 ```
 web:gunicorn app:app
 ```
@@ -117,14 +117,14 @@ json5==0.9.1
 Flask==1.1.1
 gunicorn
 ```
-**Notice:** that I am using an old version of tensorflow 1.14.0 insted of latest ones 2.x.x because **size wise the latest tensorflow package is above 500 MB** which results in `slug size too large` errors while hosting your application on heroku as the max size of application heroku can allows is 500MB. Better to keep that in mind while creating your new app!
+**Notice:** that I am using an old version of tensorflow 1.14.0 insted of latest ones 2.x.x because **size wise the latest tensorflow package is above 500 MB** which results in `slug size too large` errors while hosting your application on Heroku as the max size of application Heroku can allows is 500MB. Better to keep that in mind while creating your new app!
 
 ### Run the following commands which will create an app in your Heroku account
 ```
 heroku create <your-app-name>
 ```
 
-### Run the following commands to push your code to heroku server
+### Run the following commands to push your code to Heroku server
 ```
 git init 
 git add .
@@ -132,7 +132,7 @@ git commit -m "<your-message>
 git push heroku master
 ```
 
-Congrats your Flask app is hosted on Heroku :tada:! You can now view your app on Heroku's daskboard and change its settings from there
+Congrats your Flask app is hosted on Heroku :tada:! You can now view your app on Heroku's dashboard and change its settings from there
 
 
 ### To Open your app on browser via terminal
@@ -148,8 +148,8 @@ You will mainly need the following files to host your streamlit application on H
 - requirements.txt
 - setup.sh  
 After which you will have to do the following steps
-- Create an heroku app
-- Pushing your code to heroku server
+- Create an Heroku app
+- Pushing your code to Heroku's server
 
 ### Creating your streamlit App 
 Creating a streamlit app is quite simple as it emphasises and primarily used on python scripting behaviour. They also have cool demos you can build while learing on their [website](streamlit.io)  
@@ -239,13 +239,13 @@ matplotlib==3.1.3
 ```
 
 ### Creating an App on Heroku
-> I am assuming you have installed *heroku cli* and logged in using *heroku login*, if not follow the step given in the starting of this tutorial to setup heroku cli and login-in using your account.  
-Create your app on heroku by typing
+> I am assuming you have installed *heroku cli* and logged in using *heroku login*, if not follow the step given in the starting of this tutorial to setup Heroku cli and login using your account.  
+Create your app on Heroku by typing
 ```
 heroku create <your-app-name>
 ```
 
-### Run the following commands to push your code to heroku server
+### Run the following commands to push your code to Heroku server
 ```
 git init 
 git add .
