@@ -67,7 +67,6 @@ feature_model = tf.keras.models.Model(
 )
 _, (x_test, _ ) = tf.keras.datasets.mnist.load_data()
 x_test = x_test/255
-
 def get_prediction():
     index = np.random.choice(x_test.shape[0])
     image = x_test[index, :, :]
@@ -78,7 +77,6 @@ def get_prediction():
 - Using flask to create a API which serves values from each node of different layers in my model 
 ```
 app = Flask(__name__)
-
 @app.route('/', methods=['GET','POST'])
 def index():
     if request.method == "POST":
@@ -89,7 +87,6 @@ def index():
             'image': image.tolist()
         })
     return "Welcome to Neural Network Visualization"
-
 if __name__=="__main__":
     app.run()
 ```
@@ -186,30 +183,25 @@ if st.button('Get random prediction'):
         preds = response.get('prediction')
         image = response.get('image')
         image = np.reshape(image, (28,28))
-        
         st.sidebar.image(image, width=150)
         # print(preds)
         for layer, p in enumerate(preds):
                 # print(layer,p)
                 numbers = np.squeeze(np.array(p))
                 plt.figure(figsize=(32,6))
-
                 if layer == 2:
                         row = 1
                         col = 10
                 else:
                         row = 2
                         col = 16
-                
                 for i, number in enumerate(numbers):
                         plt.subplot(row,col,i+1)
                         plt.imshow(number * np.ones((8,8,3)).astype('float32'))
                         plt.xticks([])
                         plt.yticks([])
-
                         if layer == 2:
                                 plt.xlabel(str(i), fontsize=40)
-                
                 plt.subplots_adjust(wspace=0.05, hspace=0.05)
                 plt.tight_layout()
                 st.text('Layer {}'.format(layer+1))
