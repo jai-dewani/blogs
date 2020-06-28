@@ -62,16 +62,16 @@ from flask import Flask, request
 ```
 model = tf.keras.models.load_model('model.h5')
 feature_model = tf.keras.models.Model(
-    model.inputs,
-    [layer.output for layer in model.layers]
+	model.inputs,
+	[layer.output for layer in model.layers]
 )
 _, (x_test, _ ) = tf.keras.datasets.mnist.load_data()
 x_test = x_test/255
 def get_prediction():
-    index = np.random.choice(x_test.shape[0])
-    image = x_test[index, :, :]
-    image_arr = np.reshape(image, (1, 784))
-    return feature_model.predict(image_arr), image
+	index = np.random.choice(x_test.shape[0])
+	image = x_test[index, :, :]
+	image_arr = np.reshape(image, (1, 784))
+	return feature_model.predict(image_arr), image
 ```
 
 - Using flask to create a API which serves values from each node of different layers in my model 
