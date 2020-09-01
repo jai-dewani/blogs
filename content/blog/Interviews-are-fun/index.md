@@ -6,7 +6,7 @@ description: My experience of an interview I had for an internship at a developm
 
 ![Interviewing](images/interview.jpg)
 
-Photo by [Jonathan Borba](https://unsplash.com/@jonathanborba?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/job-interview?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+> Photo by [Jonathan Borba](https://unsplash.com/@jonathanborba?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/job-interview?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
 
 This is me sharing a 40-minute interview experience that I had on the day of writing this article for an internship at a development position. 
 
