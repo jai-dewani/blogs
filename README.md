@@ -1,11 +1,7 @@
 ![CI](https://github.com/jai-dewani/blogs/workflows/CI/badge.svg?branch=master)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/25119c66-88df-41cc-977a-8b04c1230825/deploy-status)](https://app.netlify.com/sites/blog-jaid/deploys)
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
+
+
 <h1 align="center">
   Gatsby's blog starter
 </h1>
