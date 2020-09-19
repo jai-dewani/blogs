@@ -1,5 +1,5 @@
 ---
-title: My experience of Interviewing for EDA/CFR Capabilities On-Campus 
+title: Interview experience of EDA/CFR Capabilities American Express On-Campus 
 date: "2020-09-18T10:00:00.000Z"
 description: "No one told me I needed soft skills and personality other than my technical skills"
 ---
