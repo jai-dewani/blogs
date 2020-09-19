@@ -1,7 +1,7 @@
 ---
 title: Using funmark to benchmark python function and plot results
 date: "2020-02-22T22:12:03.284Z"
-description: This is a new library funmark that I am working on right now which allows uses to calculate runtime and memory usage their functions and plot these results comparing their performance with other similar functions"
+description: "This is a new library funmark that I am working on right now which allows uses to calculate runtime and memory usage their functions and plot these results comparing their performance with other similar functions"
 ---
 
 ![funmark](images/funmark.png)

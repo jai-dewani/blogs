@@ -1,7 +1,7 @@
 ---
 title: Interviews are FUN
 date: "2020-09-02T23:00:00.000Z"
-description: My experience of an interview I had for an internship at a development position which I really enjoyes for the following reason."
+description: "My experience of an interview I had for an internship at a development position which I really enjoyes for the following reason."
 ---
 
 ![Interviewing](images/interview.jpg)
