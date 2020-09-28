@@ -1,5 +1,5 @@
 ---
-title: New dot-url links to open anything on web quickly
+title: New .url powered shortcuts to access web quickly
 date: "2020-09-29T02:00:00.000Z"
 description: "This is a part of Google's initiative to make it easier to get to things quicker by avoiding extra steps, first"
 ---
