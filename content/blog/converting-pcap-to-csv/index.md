@@ -1,10 +1,10 @@
 ---
 title: Converting .pcap to .csv using 
-date: "2020-10-06T18:00:00.000Z"
+date: "2020-10-6T18:00:00.000Z"
 description: "Even after searching the whole web I couldn't find one simple way to convert PCAP files to CSV ones, until my friend told me about this "
 ---
 
-PCAP files are mostly used to store captured network traffic, but they aren't the best for doing analysis. Hence the first step before doing any analysis is to convert them to CSV format yet there isn't a standard or a simplified way to do so, hence I am sharing what I have scavenged from the web while doing my project which was to Impliment the paper [Deep Packet: A Novel Approach For Encrypted Traffic Classification Using Deep Learning](https://arxiv.org/pdf/1709.02656.pdf)
+PCAP files are mostly used to store captured network traffic, but they aren't the best for doing analysis. Hence the first step before doing any analysis is to convert them to CSV format yet there isn't a standard or a simplified way to do so, hence I am sharing what I have scavenged from the web while doing my project which was Implimenting the paper [Deep Packet: A Novel Approach For Encrypted Traffic Classification Using Deep Learning](https://arxiv.org/pdf/1709.02656.pdf)
 
 This method has been tested on Ubuntu and should work on any other linux platform. 
 
