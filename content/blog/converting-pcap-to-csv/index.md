@@ -1,6 +1,6 @@
 ---
 title: Converting .pcap to .csv using 
-date: "2020-10-6T18:00:00.000Z"
+date: "2020-10-06T18:00:00.000Z"
 description: "Even after searching the whole web I couldn't find one simple way to convert PCAP files to CSV ones, until my friend told me about this "
 ---
 
