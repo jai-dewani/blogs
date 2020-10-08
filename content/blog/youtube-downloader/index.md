@@ -21,7 +21,7 @@ Lets begin with installing [Node](https://nodejs.org/en/), I'll recommend instal
 
 Run `npm init` to initialize a node project. You will be prompted to fill out some fields which will be reflected in the `package.json`, you can enter the information or just press enter to skip as you can always change these fields manually in `package.json`. The output should look something like this (package name depending on your root folder name)
 
-```
+```bash
 This utility will walk you through creating a package.json file.
 It only covers the most common items and tries to guess sensible defaults.
 
@@ -118,7 +118,7 @@ Create an index.js after which your directory should look something like
 ```
 
 ### /index.js | Import all the libraries needed 
-```node
+```js
 var express = require("express");
 var app = express();
 var request = require("request");
@@ -130,7 +130,7 @@ var dotenv = require("dotenv");
 
 ### /index.js | Set up project. 
 We are setting view-engine, body-parser, public folder, .env cretentials and current directry location (this last one will be used later)
-```node
+```js
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
@@ -139,7 +139,7 @@ var cwd = __dirname;
 ```
 
 ### /index.js | Create Root Routes
-```node
+```js
 app.get("/", function(req, res) {
     res.render("home");
 });
@@ -147,7 +147,7 @@ app.get("/", function(req, res) {
 
 ### /index.js | Listing to Requests on localhost:8080
 Make sure this section of code is always at the bottom-most part of your, it's not necessary but just a standard practice 
-```node
+```js
 var port = 8080;
 app.listen(port, function(req, res) {
     const log = 
@@ -288,8 +288,10 @@ The footer section contains links to JS files with the closing body and HTML tag
 ```ejs
     <div class="container" id="footnote">
         <hr>
-        Made with Web Technologies and <i class="fas fa-heart"></i> by <a href="https://twitter.com/jai_dewani"><i class="fab fa-twitter"></i>Jai</a>
-        <br>
+        Made with Web Technologies and <i class="fas fa-heart"></i> by 
+        <a href="https://twitter.com/jai_dewani">
+            <i class="fab fa-twitter"></i>Jai
+        </a><br>
         Follow the code on <i class="fab fa-github"></i> 
         <a href="http://www.github.com/jai-dewani/umusic">GitHub</a>
     </div>
@@ -355,7 +357,7 @@ Make sure that you close the server by pressing `Ctrl + C` and restart it to any
 ## Creating a Search Route
 
 ### /index.js
-```node
+```js
 app.post("/search", function(req, res) {
     var query = req.body.query;
     var finalQuery = "";
@@ -387,7 +389,7 @@ app.post("/search", function(req, res) {
 
 ### /views/search.ejs
 A search page that will show the top 5 videos from your search result, you can increase the number of videos by changing the limit of `i` on `<% for (i = 0; i <= 4; i++) { %>`.
-```ejs
+```js
 <%- include ('./partials/header') %>
 
 <div class="container">
@@ -457,7 +459,7 @@ Run your project and go to `localhost:8080` and try searching for something in t
 
 ### creating a GET route to `/download/<video-url>`
 
-```node
+```js
 app.get("/download/:videoUrl", function(req, res) {
     var video = youtube("http://www.youtube.com/watch?v=" + req.params.videoUrl, 
     ["--format=18"],
@@ -520,7 +522,7 @@ That's because you aren't sending the file to the user, it's just being download
 ## Allow userside dowloads 
 ### index.js 
 This is require just about 10 lines of changes in your `download/<video-url>` route 
-```node
+```js
 app.get("/download/:videoUrl", function(req, res) {
     var video = youtube("http://www.youtube.com/watch?v=" + req.params.videoUrl, 
     ["--format=18"],
