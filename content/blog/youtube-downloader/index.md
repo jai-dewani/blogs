@@ -1,5 +1,5 @@
 ---
-title: Creating a youtube downloader using youtube Data API v3
+title: Creating Youtube Downloader using Youtube Data API v3
 date: "2020-10-08T04:00:00.000Z"
 description: "Ever wondered how a youtube downloader works? This is a blog which will help you create a simple youtube download using Node.js and HTML/CSS"
 ---
@@ -514,7 +514,7 @@ Don't trust me? Turn on your server and start downloading, make sure to remember
 
 ## Done? Naah, there are so much more that can be one 
 
-- [ ] Allow for a vider option of quality to chose while downloading a video
+- [ ] Allow for a video option of quality to chose while downloading a video  
 - [ ] Add feature to download whole playlists in a single click
 
 Think you can solve one of these problems? Feel free to contribute to this project [utkarsh-raj/umusic](https://github.com/utkarsh-raj/umusic) which has been used as a refence to write this blog.  
