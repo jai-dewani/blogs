@@ -9,21 +9,26 @@ description: "Ever wondered how a youtube downloader works? This is a blog which
 
 *Note: This blog is for educational purpose*  
 
-Install [Node](https://nodejs.org/en/), I'll recommend installing the recommended version. Npm comes with node which will be helpful in installing packages which we will need while building this project. 
+# Aim of the project 
+
+- Allow our users to search for a specific youtube
+- Display the list of videos with thumbnail and test corresponding to the search query 
+- Provide a button to download the video
+
+Lets begin with installing [Node](https://nodejs.org/en/), I'll recommend installing the recommended version. Npm comes preinstalled with Node which will help us to install 3rd party packages we need to build this project. 
 
 ## Initialize a node project
 
-`npm init`  
-Will initialize a node project. You will be promted to fill out some fields which will be reflected in the `package.json`, you can enter the information or press enter to skip as you can always change these fields manually in `package.json`. The output should look something like this (package name depending on your folder name)
+Run `npm init` to initialize a node project. You will be prompted to fill out some fields which will be reflected in the `package.json`, you can enter the information or just press enter to skip as you can always change these fields manually in `package.json`. The output should look something like this (package name depending on your root folder name)
 
 ```
 This utility will walk you through creating a package.json file.
-It only covers the most common items, and tries to guess sensible defaults.
+It only covers the most common items and tries to guess sensible defaults.
 
 See `npm help init` for definitive documentation on these fields
 and exactly what they do.
 
-Use `npm install <pkg>` afterwards to install a package and
+Use `npm install <pkg>` afterward to install a package and
 save it as a dependency in the package.json file.
 
 Press ^C at any time to quit.
@@ -44,7 +49,7 @@ About to write to C:\Users\ASUS\Desktop\trial\package.json:
   "description": "A test project",
   "main": "index.js",
   "scripts": {
-	"test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"
@@ -56,45 +61,55 @@ About to write to C:\Users\ASUS\Desktop\trial\package.json:
 Create a new folder and open your terminal in this new folder, and start installing these libraries one by one:
 
 ### body-parser
-`npm install body-parser`
+`npm install body-parser`  
+body-parser is a middleware for parsing request body to easily access the information sent by the user via POST method in this application 
 
 ### dotenv
-`npm install dotenv`
+`npm install dotenv`  
+It's a package that loads environment variables from a `.env` file into `process.env`
 
 ### ejs
-`npm install ejs`
+`npm install ejs`  
+Ejs is a dynamic rendering template that will be used to render dynamic data to show different videos depending on the search result.
 
 ### express
-`npm install express`
+`npm install express`  
+It's a framework for Node to ease the development of end-points/APIs while working with node
 
 ### request
-`npm install request`
+`npm install request`  
+Request will be used to make HTTP requests to get information from APIs. 
 
 ### youtube-dl
-`npm intall youtube-dl`
+`npm install youtube-dl`  
+It's the core library that allows us to download videos from youtube. 
 
-### Or you can install all of them in one command
+### Or Install all of them in one command
 `npm install body-parser dotenv ejs express request youtube-dl`  
 *Pretty neat, huuh?*
 
 ## Creating a Youtube Data API v3 Key and setting up .env
 
+- This API will be used to get a list of videos from youtube when the user searches for one.   
 - Go to [Google APIs](https://console.developers.google.com/apis/library/youtube.googleapis.com) and Enable Youtube Data API v3 for a project to use it for searching 
-- You should see a `Manage` button after enabling the API, click on it and create a `Credential` which we will save in a .env fine 
-- Create a `.env` file which is used to all the credentials and things you shouldn't have on your codebase. The directry should look something like this: 
+- You should see a `Manage` button after enabling the API, click on it, and create a `Credential` which we will save in a .env file 
+- Create a `.env` file that will be used to store all the credentials and things you shouldn't have directly on your codebase. The directory should now look something like this:  
+
 ```bash
 .
 ├── .env
 └── package.json
 ```
-- Store your API Credentials in `.env` something like this  
+
+### /.env
+Store your API Credentials in `.env` something like this  
 ```
 APICREDENTIAL=your-key-here
 ```
 
-## Creating index.js and home page to search for youtube videos
+## Creating index.js and a home page to search for videos
 
-Create an index.js after which your directry should look something like 
+Create an index.js after which your directory should look something like 
 ```bash
 .
 ├── index.js
@@ -102,7 +117,7 @@ Create an index.js after which your directry should look something like
 └── package.json
 ```
 
-### Importing all the libraries needed 
+### /index.js | Import all the libraries needed 
 ```node
 var express = require("express");
 var app = express();
@@ -113,8 +128,8 @@ var youtube = require("youtube-dl");
 var dotenv = require("dotenv");
 ```
 
-### Setting up project 
-Here we are setting view-engine, body-parser, public folder, .env cretentials and current directry location (this last one will be used later)
+### /index.js | Set up project. 
+We are setting view-engine, body-parser, public folder, .env cretentials and current directry location (this last one will be used later)
 ```node
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
@@ -123,23 +138,26 @@ dotenv.config();
 var cwd = __dirname;
 ```
 
-### Creating root and search routes
+### /index.js | Create Root Routes
 ```node
 app.get("/", function(req, res) {
-	res.render("home");
+    res.render("home");
 });
 ```
 
-### Listing to any request on localhost:8080
-Make sure this section of code in always at the bottom most part of your, its not neccessary but a standard pratice because 
+### /index.js | Listing to Requests on localhost:8080
+Make sure this section of code is always at the bottom-most part of your, it's not necessary but just a standard practice 
 ```node
 var port = 8080;
 app.listen(port, function(req, res) {
-	console.log("The Server is up!\nGo to your favourite Web Browser and visit localhost:" + String(port) + " to see the Application");
+    const log = 
+    console.log("The Server is up!\n" + 
+                "Go to your favourite Web Browser and visit localhost:" 
+                + String(port) + " to see the Application");
 });
 ```
 
-But before you can server our index page we need to actually need to create it
+But before we can serve our index page we will need to create the page
 
 ## Creating views and public folder to store our VIEWS/EJS and CSS files
 
@@ -153,159 +171,169 @@ Create new files to match the following folder structure
 |   ├── leaves-pattern.png           
 │   └── styles.css              
 └── views                               
-	├── partials               
-	│   ├── header.ejs         
-	│   └── footer.ejs    
-	├── search.ejs             
-	├── started.ejs             
-	└── home.ejs  
+    ├── partials               
+    │   ├── header.ejs         
+    │   └── footer.ejs    
+    ├── search.ejs             
+    ├── started.ejs             
+    └── home.ejs  
 ```
 
 You can download the leaves-pattern.png from [here.](https://github.com/jai-dewani/umusic/raw/upstream/public/leaves-pattern.png) 
 
-### Style.css
-Since I am no expert in css have so I can only provice the code, though its very simple and short
-```
+### /style.css
+Since I am no expert in CSS have so I can only provide the code, though it's very simple and short and should be self-explanatory 
+```css
 input {
-	width: 100%;
-	padding: 1%;
+    width: 100%;
+    padding: 1%;
 }
 
 .container {
-	width: 70%;
+    width: 70%;
 }
 
 #submitButton {
-	width: 20%;
-	margin: auto;
+    width: 20%;
+    margin: auto;
 }
 
 #search{
-	padding-top: 20px;
-	padding-bottom: 3%;
+    padding-top: 20px;
+    padding-bottom: 3%;
 }
 
 #brand, a:hover{
-	margin: 0 !important;
-	padding-top: 25px !important;
-	text-decoration: none !important;
-	color: black !important;
+    margin: 0 !important;
+    padding-top: 25px !important;
+    text-decoration: none !important;
+    color: black !important;
 }
 
 #footnote {
-	text-align: center;
-	margin-top: 10%;
-	margin-bottom: 3%;
-	font-family: "Signika", "sans-serif";
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 3%;
+    font-family: "Signika", "sans-serif";
 }
 
 .fa-heart {
-	color: red;
+    color: red;
 }
 
 .dataField {
-	margin-top: 5%;
-	border-bottom: 2px solid black;
+    margin-top: 5%;
+    border-bottom: 2px solid black;
 }
 
 .col-md-5 {
-	border: 1px solid white;
-	border-right: 2px solid green;
-	margin-top: 1%;
-	margin-bottom: 1%;
-	text-align: center;
+    border: 1px solid white;
+    border-right: 2px solid green;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    text-align: center;
 }
 
 #download {
-	color: white;
+    color: white;
 }
 
 hr {
-	border-top: 1px solid black;
+    border-top: 1px solid black;
 }
 
 h1 {
-	font-family: "Acme", "sans-serif";
+    font-family: "Acme", "sans-serif";
 }
 
 span {
-	font-family: "Sedgwick Ave", "cursive";
+    font-family: "Sedgwick Ave", "cursive";
 }
 
 body {
-	background: url(/leaves-pattern.png);
+    background: url(/leaves-pattern.png);
 }
 
 #startedPage {
-	text-align: center;
+    text-align: center;
 }
 ```
 
-### views/partials/header.ejs
-Contains basic header of html with links to various css files that are needed
-```
+### /views/partials/header.ejs
+Contains basic header of HTML with links to various CSS files that are needed
+```html
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>UMusic - Your Music Simplified</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
-		crossorigin="anonymous">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
-		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" 
-		crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Acme|Signika|Sedgwick-Ave" rel="stylesheet">
-		<link rel="stylesheet" href="/styles.css">
-	</head>
+    <head>
+        <title>UMusic - Your Music Simplified</title>
+        <link 
+            rel="stylesheet" 
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link 
+            rel="stylesheet" 
+            href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <link 
+            rel="stylesheet">
+            href="https://fonts.googleapis.com/css?family=Acme|Signika|Sedgwick-Ave" 
+        <link 
+            rel="stylesheet" 
+            href="/styles.css">
+    </head>
 
-	<body>
+    <body>
 ```
 
-### views/partials/footer.ejs
-The footer section, links to JS files with closing body and html tags
-```
-	<div class="container" id="footnote">
-		<hr>
-		Made with Web Technologies and <i class="fas fa-heart"></i> by <a href="https://twitter.com/jai_dewani"><i class="fab fa-twitter"></i>Jai</a>
-		<br>
-		Follow the code on <i class="fab fa-github"></i> <a href="http://www.github.com/utkarsh-raj/umusic">GitHub</a>
-	</div>
-		
-		<script
-		src="https://code.jquery.com/jquery-3.3.1.min.js"
-		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-		crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
-		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
-		crossorigin="anonymous"></script>
-		<script src="script.js"></script>
-	</body>
+### /views/partials/footer.ejs
+The footer section contains links to JS files with the closing body and HTML tag at the end.
+```ejs
+    <div class="container" id="footnote">
+        <hr>
+        Made with Web Technologies and <i class="fas fa-heart"></i> by <a href="https://twitter.com/jai_dewani"><i class="fab fa-twitter"></i>Jai</a>
+        <br>
+        Follow the code on <i class="fab fa-github"></i> 
+        <a href="http://www.github.com/jai-dewani/umusic">GitHub</a>
+    </div>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+        </script>
+        <script src="script.js">
+        </script>
+    </body>
 </html>
 ```
 
-Don't forget to change the my name with yours and the link to my twitter account :P
+Don't forget to change my name, links to my twitter and GitHub account with yours ;)
 
-### views/home.ejs
-A simple search bar to search your favourite youtube video you want to download 
-```
+### /views/home.ejs
+A simple search bar to search your favorite youtube videos you wanna download 
+```ejs
 <%- include ('./partials/header') %>
 
 <div class="jumbotron">
-	<div class="container">
-		<h1><i class="fas fa-headphones"></i> UMusic</h1>
-		<p>Your favourite music downloads. <span>Simplified.</span></p>
-	</div>
+    <div class="container">
+        <h1><i class="fas fa-headphones"></i> UMusic</h1>
+        <p>Your favourite music downloads. <span>Simplified.</span></p>
+    </div>
 </div>
 
 <div class="container" id="main">
-	<form action="/search" method="POST" class="form-group">
-		<div class="container" id="search">
-			<input type="text" name="query" placeholder="Find everything you ever wanted..." class="form-control">
-		</div>
-		<div class="container" id="submitButton">
-			<input type="submit" name="Let's Go!" class="btn btn-primary form-control">
-		</div>
-	</form>
+    <form action="/search" method="POST" class="form-group">
+        <div class="container" id="search">
+            <input 
+                type="text" 
+                name="query" 
+                placeholder="Find everything you ever wanted..." 
+                class="form-control">
+        </div>
+        <div class="container" id="submitButton">
+            <input 
+                type="submit" 
+                name="Let's Go!" 
+                class="btn btn-primary form-control">
+        </div>
+    </form>
 </div>
 <%- include ('./partials/footer') %>
 
@@ -314,8 +342,8 @@ A simple search bar to search your favourite youtube video you want to download
 
 ## Lets try running our project and see how it looks 
 
-Running a node.js project in very simple, just run the following commands on the terminal at the root of your project-folder
-```
+Running a node.js project is very simple, just run the following commands on the terminal at the root of your project directory
+```bash
 node index.js
 ```
 Now go to your browser and open `localhost:8080` and hopefully you'll see something like 
@@ -326,11 +354,11 @@ Make sure that you close the server by pressing `Ctrl + C` and restart it to any
 
 ## Creating a Search Route
 
-### index.js
+### /index.js
 ```node
 app.post("/search", function(req, res) {
-	var query = req.body.query;
-	var finalQuery = "";
+    var query = req.body.query;
+    var finalQuery = "";
     var i = 0;
     for (i = 0; i < query.length; i++) {
         if (query[i] !== " ") {
@@ -340,22 +368,27 @@ app.post("/search", function(req, res) {
             finalQuery += "+";
         }
     }
-	const url = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + finalQuery + "&key=" + process.env.APICREDENTIAL;
-	request(url, function(error, response, body) {
-		if (error) {
-			console.log(error);
-		}
-		var data = JSON.parse(body);
-		console.log(data);
-		res.render("search", {data: data});
+    
+    const url = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" 
+                + finalQuery 
+                + "&key=" 
+                + process.env.APICREDENTIAL;
+
+    request(url, function(error, response, body) {
+        if (error) {
+            console.log(error);
+        }
+        var data = JSON.parse(body);
+        console.log(data);
+        res.render("search", {data: data});
     });
 });
 ```
 
-### views/search.ejs
-A search page which will show the top 5 videos from your search result, you can increase the number of videos by changing the limit of the limit of i on `<% for (i = 0; i <= 4; i++) { %>`.
-```
-<% include ./partials/header %>
+### /views/search.ejs
+A search page that will show the top 5 videos from your search result, you can increase the number of videos by changing the limit of `i` on `<% for (i = 0; i <= 4; i++) { %>`.
+```ejs
+<%- include ('./partials/header') %>
 
 <div class="container">
     <div class="row">
@@ -366,48 +399,61 @@ A search page which will show the top 5 videos from your search result, you can 
         </div>
         <form action="/search" method="POST" class="form-group">
             <div class="col-md-6" id="search">
-                <input type="text" name="query" placeholder="Find everything you ever wanted..." class="form-control">
+                <input 
+                    type="text" 
+                    name="query" 
+                    placeholder="Find everything you ever wanted..." 
+                    class="form-control">
             </div>
             <div class="col-md-2" id=search>
-                <input type="submit" name="Let's Go!" class="btn btn-primary form-control">                
+                <input 
+                    type="submit" 
+                    name="Let's Go!" 
+                    class="btn btn-primary form-control">                
             </div>
         </form>
     </div>
 
-        <% var i = 0;%>
-        <% for (i = 0; i <= 4; i++) { %>
-            <% if (data.items[i].id.kind === "youtube#video") { %>
-                <div class="row dataField">
-                    <div class="col-md-5 img-thumbnail img-responsive">
-                        <img src="<%= data.items[i].snippet.thumbnails.medium.url %>">
-                    </div>
-                    <div class="col-md-7">
-                        <h3><%= data.items[i].snippet.title %></h3>
-                        <p>
-                            by <strong><%= data.items[i].snippet.channelTitle; %></strong>
-                        </p>
-                        <a id="download" href="/download/<%= data.items[i].id.videoId %>">
-                            <button class="btn btn-primary"><i class="fas fa-download"></i> Download Now!</button>
-                        </a>
-                    </div>
+    <% var i = 0;%>
+    <% for (i = 0; i <= 4; i++) { %>
+        <% if (data.items[i].id.kind === "youtube#video") { %>
+            <div class="row dataField">
+                <div class="col-md-5 img-thumbnail img-responsive">
+                    <img src="<%= data.items[i].snippet.thumbnails.medium.url %>">
                 </div>
-                <br>
-            <% } %>
+                <div class="col-md-7">
+                    <h3><%= data.items[i].snippet.title %></h3>
+                    <p>
+                        by 
+                        <strong>
+                            <%= data.items[i].snippet.channelTitle; %>
+                        </strong>
+                    </p>
+                    <a id="download" 
+                        href="/download/<%= data.items[i].id.videoId %>">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download Now!
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <br>
         <% } %>
+    <% } %>
 </div>
 
-<% include ./partials/footer %>
+<%- include ('./partials/footer') %>
 ```
 
 ## Search page done, Lets check if it works or not 
 
-Run your project and go to `localhost:8080` and try searching something. Hope fully you'll see something like 
+Run your project and go to `localhost:8080` and try searching for something in the search bar. Hopefully, you'll see something like 
 
 ![Search Page](./images/search.JPG)
 
-*Like my search results? :p*
+*Like what you see? Xd*
 
-## Now, creating a route to download a youtube video. Exicted? 
+## Now, creating a route to download a youtube video. Excited? 
 
 ### creating a GET route to `/download/<video-url>`
 
@@ -438,7 +484,7 @@ app.get("/started", function(req, res) {
 Youtube-dl allows us to create an object which has many functions to be attached to Event names emitted by the object. We here are using the `video.on('info')` which is executed when the video object receives an `info` signal from youtube.
 Inside which we are saving `track` and starting a download using `video.pipe(fs.createWriteStream(track));` while using node's standard file system `fs` library. Since the video is going to be a stream of data which is why we have used `fs.createWriteStream(track)` with the `track` as the file name. 
 
-The extra route is to be redirected after you click the download button to a "Downloaded Succesfully" page. But now we have to create this page. 
+The extra route is to be redirected after you click the download button to a "Downloaded Successfully" page. But now we have to create this page. 
 
 ## views/started.ejs
 ```ejs
@@ -448,9 +494,8 @@ The extra route is to be redirected after you click the download button to a "Do
     <h2>Your download has started!</h2>
     <br>
     <p>
-        In the meanwhile, you can go back for more downloads <a href="/">here</a>, or feel free to connect with the Dev on <a href="http://www.github.com/utkarshraj/umusic"><i class="fab fa-github"></i> GitHub</a> for bug reports, feedback, or a cup of coffee!
+        In the meanwhile, you can go back for more downloads 
         <br>
-        The App is in the Beta Version, so you may find some really neat bugs in here :-)
     </p>
     <div class="container">
         <a href="/"><h4>Get More Videos!</h4></a>
@@ -460,17 +505,19 @@ The extra route is to be redirected after you click the download button to a "Do
 <%- include ('./partials/footer') %>
 ```
 
-## Done! Lets try downloading some videos
+## Done! Let's try downloading some videos
 
-Run your Node server, try searching something and click on download.  
+Run your Node server, try searching something, and click on download.  
 ### *Notice something weird?*  
-The file is download in your project folder and not in your download location! You might have guessed it, but if not this is because of `cwd`, we assigned `var cwd = __dirname` while setting up the project which basically takes the current location of the file which is index.js inside of your project-folder. That is all good, maybe I'll pass set my download folder in `cwd` which will solve my problem. 
+The file is being downloaded in your project folder and not in your download location! You might have guessed it, but if not this is because of `cwd`, which we assigned as `__dirname` while setting up the project which takes the current location of the file which is index.js in your current directory. Good that we were able to find this problem, maybe I'll set my download folder in `cwd`. This should solve my problem. 
 
-But there is another problem, after clicking the download button I don't get prompt in my browser about a file downloading. Can you guess why is that? 
+But there is another problem, after clicking the download button I don't get a prompt in my browser about a file downloading. Can you guess why is that? 
 
-Well that's because you aren't sending the file to the user, its just being downloading in the backend which luckly is your system so you can access this download, but this won't work when you want to host this solution and let users download youtube videos in their system. 
+*Thinking*
 
-## PATCH
+That's because you aren't sending the file to the user, it's just being downloading in the backend which luckily is your system in this case so can access this download, but this won't work when you want to host this solution and let users download youtube videos in their system. It will just keep downloading the files on the server. 
+
+## Allow userside dowloads 
 ### index.js 
 This is require just about 10 lines of changes in your `download/<video-url>` route 
 ```node
@@ -506,15 +553,16 @@ app.get("/download/:videoUrl", function(req, res) {
 });
 ```
 
-The major changes are that in `video.on('info',)` we are just writing the head of our response with the file-type, name and its length. And we have added `video.on('data')` which is where we are taking the stream of data from youtube and sending to the user via `res` while closing the connection when the `video.on('end')` prompt is received to our `video` object
+The major changes are that in `video.on('info',)` we are just writing the head of our response with the file-type, name, and length. And we have added `video.on('data')` which is where we are taking the stream of data from youtube and sending to the user via `res` while closing the connection when the `video.on('end')` prompt is received to our `video` object
 
-## Finally Done! I promise its done 
+## Finally Done! I promise it's done 
 
-Don't trust me? Turn on your server and start downloading, make sure to remember the Youtbe Data API is free up to a limit so it won't be profitable to turning to host this for everyone unless the access is restricted to a group of people. 
+Don't trust me? Turn on your server and start downloading, make sure to remember the Youtube Data API is free up to a limit so it won't be profitable to turning to host this for everyone unless the access is restricted to a group of people. 
 
 ## Done? Naah, there are so much more that can be one 
 
 - [ ] Allow for a video option of quality to chose while downloading a video  
 - [ ] Add feature to download whole playlists in a single click
+- [ ] Allow users to directly submit a youtube video URL instead of searching to download videos
 
-Think you can solve one of these problems? Feel free to contribute to this project [utkarsh-raj/umusic](https://github.com/utkarsh-raj/umusic) which has been used as a refence to write this blog.  
+Think you can solve one of these problems? Feel free to contribute to this project [utkarsh-raj/umusic](https://github.com/utkarsh-raj/umusic) which has been used as a reference to write this blog.  
