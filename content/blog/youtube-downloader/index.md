@@ -7,7 +7,7 @@ description: "Ever wondered how a youtube downloader works? This is a blog which
 
 > Photo by [Tim Gouw](https://unsplash.com/@punttim?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/frustrated?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText) -->
 
-*Note: This blog is for educational purpose*  
+*Note: This blog is for educational purpose only*  
 
 # Aim of the project 
 
@@ -519,7 +519,7 @@ But there is another problem, after clicking the download button I don't get a p
 
 That's because you aren't sending the file to the user, it's just being downloading in the backend which luckily is your system in this case so can access this download, but this won't work when you want to host this solution and let users download youtube videos in their system. It will just keep downloading the files on the server. 
 
-## Allow userside dowloads 
+## Allow userside downloads 
 ### index.js 
 This is require just about 10 lines of changes in your `download/<video-url>` route 
 ```js
