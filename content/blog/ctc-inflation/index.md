@@ -1,6 +1,6 @@
 ---
 title: CTC Inflation, What? Why? How? 
-date: "2020-11-020T018:00:00.000Z"
+date: "2020-11-20T18:00:00.000Z"
 description: "Every Computer Science student has seen CTC Inflations without realizing it, Lets breakdown what it really means"
 ---
 ![Money](./images/money.jpg)
