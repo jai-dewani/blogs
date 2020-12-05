@@ -44,5 +44,5 @@ A lot of Big Engineering companies are following these methods of hyping up the 
 
 In the end, what we need to realize is that the CTC we all see and crave is the entire story. I am including a very informative answer by [Kaustav Mukherjee](https://www.linkedin.com/in/kaustav-mukherjee-17547751/?originalSubdomain=in) who works at Microsoft on quora about [CTC Breakdown of Microsft and more.](https://qr.ae/pNWkzn)
 
-If you loved reading this article, please consider helping me out by [twetting](https://twitter.com/intent/tweet?text=CTC%20Inflation,%20What?%20Why?%20How?%0Aby%20%40jai_dewani%0A%0A%23ctc%20%23inflation%20%23%23DEVCommunity%0A%0Ahttps%3A//blogs.jaid.tech/ctc-inflation/%0A%0A) about it.  
+If you loved reading this article, please consider helping me out. [Share on Twitter](https://twitter.com/intent/tweet?text=%22Ever%20saw%20CTC%20of%20around%2040-50%20Lakhs%20with%20a%20base%20of%2012-15%20Lakhs%20and%20wondered%20where%20are%20the%20rest%20of%2030-35%20Lakhs?%20Yeah,%20me%20too.%22%0A-%20%22CTC%20Inflation,%20What?%20Why?%20How?%22%20by%20%40jai_dewani%0A%0A%23ctc%20%23inflation%20%23DEVCommunity%0Ahttps%3A//blogs.jaid.tech/ctc-inflation/%0A)  
 Thanks a lot :)
