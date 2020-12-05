@@ -6,21 +6,21 @@ description: "This is a new library funmark that I am working on right now which
 
 ![funmark](images/funmark.png)
 
-Before starting the blog I wanted to say that this is my first pypi package and it is still in development phase so if anyone finds it intresting, make sure to checkout funmark in [github](https://github.com/jai-dewani/fun-mark)
+Before starting the blog I wanted to say that this is my first PyPI package and it is still in the development phase so if anyone finds it interesting, make sure to checkout funmark in [GitHub](https://github.com/jai-dewani/fun-mark)
 
-Funmark is a python package which can be used for fuction benchmarking and then to analyze/compare their runtime and memory consumption using graph plots. 
+Funmark is a python package that can be used for function benchmarking and then to analyze/compare their runtime and memory consumption using graph plots. 
 
 In this blog I will be using my funmark package to benchmark sorting functions, mainly
 - QuickSort
 - MergeSort
 - TimSort
 
-Lets Start by first importing funmark and random.randint for creating random arrays
+Let's Start by first importing funmark and random.randint() for creating random arrays
 ```
 import funmark
 from random import randint
 ```
-Lets create functions for each sorting method 
+Let's create functions for each sorting method 
 ## QuickSort 
 ```
 def partition(arr,low,high): 
@@ -119,10 +119,10 @@ while listSize < maxSize:
 
     listSize = int(2*listSize)
 ``` 
-For each function I am running .run(function Name, parameter) to get their runtime and memory usage and then I am saving them to their respective objects using .add(size, time, memory)
-At the last line of while loop and increasing the size of listSize so that we can get these values for different sizes of list
+For each function, I am running .run(function Name, parameter) to get their runtime and memory usage, and then I am saving them to their respective objects using .add(size, time, memory)
+At the last line of while loop and increasing the size of listSize so that we can get these values for different sizes of the list
 
-## Plotting comparision graphs   
+## Plotting comparison graphs   
 ```
 merge.compareTime("Length", "Time", "Compression between Sorting Algorithms", quick, tim)
 ```
@@ -132,13 +132,13 @@ Here I am plotting the graph of time with *merge* and passing *quick* and *tim* 
 
 As you can see QuickSort even though has bigger worst case time complexity that MergeSort, its average case is much better due to 
 
-- Auxiliary Space: Quick sort is an in-place sorting algorithm.  Merge sort on the other hand requires a temporary array to merge the sorted arrays and hence it is not in-place.
+- Auxiliary Space: Quicksort is an in-place sorting algorithm.  Merge sort on the other hand requires a temporary array to merge the sorted arrays and hence it is not in-place.
 
 - Worst case: The worst case of quicksort O(n^2) can be avoided by using randomized quicksort. It can be easily avoided with high probability by choosing the right pivot.
 
-- Locality of reference: Quicksort in particular exhibits good cache locality and this makes it faster than merge sort in many cases like in virtual memory environment.
+- Locality of reference: Quicksort in particular exhibits good cache locality and this makes it faster than merge sort in many cases like in a virtual memory environment.
 
-- Tail recursion: QuickSort is tail recursive while Merge sort is not. A tail recursive function is a function where recursive call is the last thing executed by the function. The tail recursive functions are considered better than non tail recursive functions as tail-recursion can be optimized by compiler.
+- Tail recursion: QuickSort is tail recursive while Merge sort is not. A tail recursive function is a function where a recursive call is the last thing executed by the function. They are considered better than non tail recursive functions as they can be optimized by the compiler before execution.
 
 And Tim Sort performs exceptionally better than both as expected, hence it's better to use python's in-build .sort() method as long as your need is plain sorting.
 
@@ -146,14 +146,15 @@ And Tim Sort performs exceptionally better than both as expected, hence it's bet
 merge.compareMemory("Length", "Time", "Compression between Sorting Algorithms", quick, tim)
 ```
 
-Here I am plotting the graph of memory with *merge* and passing *quick* and *tim* to plot all of them together, here is the result of this line
+Here I am plotting the graph of memory with *mergeSort* and passing *quickSort* and *timSort* to plot all of them together, here is the result of this line
 
 ![Image](images/memory.png)
 
-The plot for QuickSort is just below the TimSort plot hence it isn't clearly visible in this plot but from this we can understand that MergeSort requires extra space where as QuickSort and TimSort don't!
+The plot for QuickSort is just below the TimSort plot hence it isn't clearly visible in this plot but from this we can understand that MergeSort requires extra space whereas QuickSort and TimSort don't!
 
-This was just a simple analysis of Sorting Algorithms but funmark can be used to do benchmark and analysis for any python code as long as it can be writter in a function.
+This was just a simple analysis of Sorting Algorithms but funmark can be used to do benchmark and analysis for any python code as long as it can be written in a function.
 
-If you liked what this library can do then check it out on [github](https://github.com/jai-dewani/fun-mark) and drop a star and look into issue tab if you want to contribute!
+If you liked what this library can do then check it out on [github](https://github.com/jai-dewani/fun-mark) and drop a star and look into the issue tab if you want to contribute!
 
-> Your Experience may vary 
+
+

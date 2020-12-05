@@ -43,3 +43,6 @@ A lot of Big Engineering companies are following these methods of hyping up the 
 - **Joining Bonus and Relocation Bonus:** You will usually get this amount just once when you join the company and will not be present in your second year so technically your gross salary will decrease in the second year. How great is that, right? 
 
 In the end, what we need to realize is that the CTC we all see and crave is the entire story. I am including a very informative answer by [Kaustav Mukherjee](https://www.linkedin.com/in/kaustav-mukherjee-17547751/?originalSubdomain=in) who works at Microsoft on quora about [CTC Breakdown of Microsft and more.](https://qr.ae/pNWkzn)
+
+If you loved reading this article, please consider helping me out by [twetting](https://twitter.com/intent/tweet?text=CTC%20Inflation,%20What?%20Why?%20How?%0Aby%20%40jai_dewani%0A%0A%23ctc%20%23inflation%20%23%23DEVCommunity%0A%0Ahttps%3A//blogs.jaid.tech/ctc-inflation/%0A%0A) about it.  
+Thanks a lot :)
