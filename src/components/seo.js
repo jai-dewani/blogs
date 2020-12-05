@@ -54,12 +54,20 @@ const SEO = ({ description, lang, meta, title }) => {
           content: `website`,
         },
         {
+          property: `twitter:site`,
+          content: `twitter:https://blogs.jaid.tech:`
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
           content: site.siteMetadata.social.twitter,
+        },
+        {
+          name: `twitter:site`,
+          content: `@jai_dewani`,
         },
         {
           name: `twitter:title`,
@@ -69,6 +77,10 @@ const SEO = ({ description, lang, meta, title }) => {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name:`twitter:image`,
+          content: `https://avatars0.githubusercontent.com/u/33520257?s=460&u=f7f8fa30d7f65c123ced8794ad8df0d506a210de&v=4`
+        }
       ].concat(meta)}
     />
   )
