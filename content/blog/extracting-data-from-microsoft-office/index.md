@@ -1,5 +1,5 @@
 ---
-title: Extracting Images, Audio, Videos from Microsoft Office files 
+title: Extracting Images, Audio and Videos from Microsoft Office files 
 date: "2020-12-15T18:00:00.000Z"
 description: "Microsoft office files are ZIP files under the hood, every tried unzipping them?"
 ---
