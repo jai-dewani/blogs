@@ -1,5 +1,5 @@
 ---
-title: Automating WhatsApp in 5 minutes to Irritate your friends by spamming
+title: Create Your Own Whatsapp Spambot in 5 Minutes
 date: "2020-12-19T12:00:00.000Z"
 description: "Wanna Irritate your friends by creating a spam bot with whatsapp web withing minutes?"
 ---
