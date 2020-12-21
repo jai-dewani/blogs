@@ -8,30 +8,34 @@ Do your friends constantly spam you just to get your attention, wanna give this 
 
 Let's get over what we are going to do, We are going to use Developer Console to inject some script into WhatsApp Web. 
 
-### Open WhatsApp Web and the chat in which your bot should spam
+### WhatsApp Web
+Open WhatsApp web and make sure the chat which your bot is supposed to spam is opened on the center-right screen 
 
-### Open Developer Console 
+### 💻 Developer Console 
 Either search for **Developer Tools** in the drop-down menu in any browser or use the shortcut `Ctrl + Shift + I'd move to the **Console tab** where we can write Javascript and interact with the DOM (Document Object Model).
 
-### Let's enter some text in the message box
+### ✍️ Enter some text in the message box
 We are going to use CSS selectors to select a specific section of the web page and then use `document.querySelector()` to get the DOM object of that section. Let's select the input area object and store it in the `textbox` variable
 ```
 var textpath = '#main > footer > div._3SvgF._1mHgA.copyable-area > div.DuUXI > div > div._1awRl.copyable-text.selectable-text';
 var textbox = document.querySelector(textpath);
 ```
-Now type something directly in the message box, and enter `textbox.textContent` into the console and it should return the same text, let's try setting some text via the Developer Console instead of directly typing it in
+Now type something directly in the message box, and enter `textbox.textContent` into the console and it should return the same text, let's try setting some text via the Developer Console instead of directly typing it in  
 ```
 textbox.textContent = "Some Text"
 ```
 The same text must be updated in the WhatsApp web GUI. Yaay, we hare halfway done    
-![](images/message.jpeg)
+
+![](images/message.jpeg)  
+
 but there is a problem, we have the record button where the send button is supposed to be. That's because we have changed the state of the message box internally but the input needs to know that something has been typed on it to update the mic button to the send button. Let's do this by 
 ```
 window.InputEvent = window.Event || window.InputEvent
 var event = new InputEvent('input', {bubbles: true});
 textbox.dispatchEvent(event);
 ```
-Now the send button is visible 
+Now the send button is visible  
+
 ![](images/message1.jpeg)
 
 ### Send the message
@@ -42,7 +46,7 @@ var buttonpath = '#main > footer > div._3SvgF._1mHgA.copyable-area > div:nth-chi
 var b = document.querySelectorAll(buttonpath)[0]
 b.click();
 ```
-### 🎉 You have now automated the process of sending one message, lets try to send many continuously 
+### 🎉 Congratulations, You have now automated the process of sending one message. Lets try to send more
 One easy way is to just run this whole code in a loop. 
 ```
 var i = 0;
@@ -60,7 +64,7 @@ for(i=0;i<10;i++){
     b.click();
 }
 ```
-This is all great but let's make this code bit more general by allowing the user to select the text and number of repetitions at runtime. 
+This is all great but let's make this code bit more general by allowing the user to select the text and number of repetitions at runtime. This is done by asking the input froma propmt similar to aleart box. At the end the code hsould be guesssing.
 
 ```
 var message = prompt("Enter the message");
