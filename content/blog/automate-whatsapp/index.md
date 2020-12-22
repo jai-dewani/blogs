@@ -12,7 +12,7 @@ Let's get over what we are going to do, We are going to use Developer Console to
 Open WhatsApp web and make sure the chat which your bot is supposed to spam is opened on the center-right screen 
 
 ### 💻 Developer Console 
-Either search for **Developer Tools** in the drop-down menu in any browser or use the shortcut `Ctrl + Shift + I'd move to the **Console tab** where we can write Javascript and interact with the DOM (Document Object Model).
+Either search for **Developer Tools** in the drop-down menu in any browser or use the shortcut `Ctrl + Shift + I` and move to the **Console tab** where we can write Javascript and interact with the DOM (Document Object Model).
 
 ### ✍️ Enter some text in the message box
 We are going to use CSS selectors to select a specific section of the web page and then use `document.querySelector()` to get the DOM object of that section. Let's select the input area object and store it in the `textbox` variable
