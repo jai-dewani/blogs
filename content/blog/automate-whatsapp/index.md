@@ -8,7 +8,7 @@ Do your friends constantly spam you just to get your attention, wanna give this 
 
 Let's get over what we are going to do, We are going to use Developer Console to inject some script into WhatsApp Web. 
 
-### WhatsApp Web
+### 🕸 WhatsApp Web
 Open WhatsApp web and make sure the chat which your bot is supposed to spam is opened on the center-right screen 
 
 ### 💻 Developer Console 
@@ -38,7 +38,7 @@ Now the send button is visible
 
 ![](images/message1.jpeg)
 
-### Send the message
+### ⏩ Send the message
 All that is left is to select the send button and send a click signal to let it know the message is read to be sent. Let's do this by first selecting the send button and then by calling the click method. 
 
 ```
@@ -87,7 +87,7 @@ Now the user can enter the message the loop count in alert boxes and the result 
 
 ![](images/repeat.JPG)
 
-### Extra bit
+### 🐾 Extra bit
 This is just the starting, you can customize this script in several ways to do different tasks like how I change a few things so now this script takes in a message and sends each word as a separate message, just because I hate when people do this to me. Why can't you people send the whole message together? -_-
 
 ```
