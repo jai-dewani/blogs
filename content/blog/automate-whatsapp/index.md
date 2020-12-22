@@ -64,7 +64,7 @@ for(i=0;i<10;i++){
     b.click();
 }
 ```
-This is all great but let's make this code bit more general by allowing the user to select the text and number of repetitions at runtime. This is done by asking the input froma propmt similar to aleart box. At the end the code hsould be guesssing.
+This is all great but let's make this code bit more general by allowing the user to select the text and number of repetitions at runtime. This can be done by taking input from the user using a prompt similar to an alert box. In the end, the code should look something like this
 
 ```
 var message = prompt("Enter the message");
@@ -112,6 +112,6 @@ Try entering the lyrics of Rap God and watch your WhatsApp send 1560 words to yo
 
 PS: The original script was created by [Anurag Sahu](https://www.linkedin.com/in/anurag-sahu-93ba27143/) and edited by me. Link to the [repository](https://github.com/jai-dewani/SendWhatsppTextByJavaScript)
 
-> *Like my content? Consider subscribing to my [Newsletter](https://buttondown.email/jai_dewani). or support me by [tweeting][tweet] about my blog*
+> *Like my content? Consider subscribing to my [Newsletter](https://buttondown.email/jai_dewani) or support me by [tweeting][tweet] about my blog*
 
 [tweet]: https://twitter.com/intent/tweet?text=%22Create%20Your%20Own%20Whatsapp%20Spambot%20in%205%20Minutes%22%20-%20%40jai_dewani%20%0A%0Ahttps%3A//blogs.jaid.tech/automate-whatsapp/%0A%0A%23Blog%20%23WhatsApp%20%23AUTOMATION%20%23SpamALot%20%20
