@@ -110,8 +110,8 @@ for(looper=0;looper<message.length;looper++)
 
 Try entering the lyrics of Rap God and watch your WhatsApp send 1560 words to your friend in separate messages 😂😂 Do try out different things and let me know what all you did with this on [Twitter](https://twitter.com/jai_dewani) or [Linkedin](https://www.linkedin.com/in/jai-dewani) 🤩  
 
-PS: The orignial script was created by [Anurag Sahu](https://www.linkedin.com/in/anurag-sahu-93ba27143/) and edited by me. Link to the [repository](https://github.com/jai-dewani/SendWhatsppTextByJavaScript)
+PS: The original script was created by [Anurag Sahu](https://www.linkedin.com/in/anurag-sahu-93ba27143/) and edited by me. Link to the [repository](https://github.com/jai-dewani/SendWhatsppTextByJavaScript)
 
 > *Like my content? Consider subscribing to my [Newsletter](https://buttondown.email/jai_dewani). or support me by [tweeting][tweet] about my blog*
 
-[tweet]: https://twitter.com/intent/tweet?text=%22Automating%20WhatsApp%20in%205%20minutes%20to%20Irritate%20your%20friends%20by%20spamming%22%20-%20%40jai_dewani%20%0A%0Ahttp%3A//blogs.jaid.tech/automate-whatsapp/%0A%0A%23Blog%20%23WhatsApp%20%23AUTOMATION%20%23SpamALot%20
+[tweet]: https://twitter.com/intent/tweet?text=%22Create%20Your%20Own%20Whatsapp%20Spambot%20in%205%20Minutes%22%20-%20%40jai_dewani%20%0A%0Ahttps%3A//blogs.jaid.tech/automate-whatsapp/%0A%0A%23Blog%20%23WhatsApp%20%23AUTOMATION%20%23SpamALot%20%20
