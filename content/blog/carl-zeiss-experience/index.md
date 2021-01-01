@@ -57,3 +57,13 @@ In the end, 6 people got to the HR round and 5 were selected for a 6-month inter
 - FullStack: 2
 - Machine Learning: 2 
 - Python/C++: 1
+
+### PS 
+I am hoping to document my internship in form og blogs every 1-2 week describing the kind of work I did and the new things I am learning because I as a fresher I was always interested in knowing what kind of work people did and how they approach problem working in a company. Hence I am starting a newsletter so that people can follow my journey and if it even helps even one person, it will be worth all the work. **Consider subscribing to my newsletter**. I'll try to share any new blogs that I end up writing. 
+
+
+<iframe
+scrolling="no"
+style="width:100%!important;height:220px;border:1px #ccc solid !important"
+src="https://buttondown.email/jai_dewani?as_embed=true"
+></iframe><br /><br />
