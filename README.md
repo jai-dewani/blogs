@@ -8,7 +8,7 @@
 
 ### Recent Blog Posts
 <!-- BLOG-POST-LIST:START -->
-- [Carl Zeiss Interview Experience - FullStack Developer](https://blogs.jaid.tech/carl-zeiss-experience/)
+- [Carl Zeiss Interview Experience - FullStack Developer](https://blogs.jaid.tech/carl-zeiss-interview-experience/)
 - [Create Your Own Whatsapp Spambot in 5 Minutes](https://blogs.jaid.tech/automate-whatsapp/)
 - [Extracting Images, Audio and Videos from Microsoft Office files](https://blogs.jaid.tech/extracting-data-from-microsoft-office/)
 - [CTC Inflation, What? Why? How?](https://blogs.jaid.tech/ctc-inflation/)
