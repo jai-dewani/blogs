@@ -59,8 +59,9 @@ In the end, 6 people got to the HR round and 5 were selected for a 6-month inter
 - Python/C++: 1
 
 ### PS 
-I am hoping to document my internship in form og blogs every 1-2 week describing the kind of work I did and the new things I am learning because I as a fresher I was always interested in knowing what kind of work people did and how they approach problem working in a company. Hence I am starting a newsletter so that people can follow my journey and if it even helps even one person, it will be worth all the work. **Consider subscribing to my newsletter**. I'll try to share any new blogs that I end up writing. 
+I am hoping to document my internship in form of blogs every 1-2 week describing the kind of work I did and the new things I am learning because I as a fresher I was always interested in knowing what kind of work people did and how they approach problem working in a company. Hence I am starting a newsletter so that people can follow my journey and if it even helps even one person, it will be worth all the work. **Consider subscribing to my newsletter** and I'll try to share any new blogs that I end up writing too. 
 
+<link rel="canonical" href="https://blogs.jaid.tech/carl-zeiss-interview-experience/">
 
 <iframe
 scrolling="no"
