@@ -28,7 +28,11 @@ After our first submission where we just chose the first library which had the l
  
 ![Points Table](./images/leaderboard.png)
  
-So we ended up with our first hashcode with 26.27M points. Already excited to participate next year!
+So we ended up with our first hashcode with 26.27M points. Had blast and already excited to participate next year!
 
-<a rel="nofollow" href="https://www.linkedin.com/pulse/hashcode-2020-experience-jai-kumar-dewani/">
- Link to my orignal article on LinkedIn</a>
+### Me and my teamate
+- [Anurag Shukla](https://www.linkedin.com/in/anurag-shukla-a2090514a/)
+- [Jai Kumar Dewani (me)](https://twitter.com/jai_dewani)
+- [Rajiv Nayan Choubey](https://www.linkedin.com/in/rajivnayanc/)
+- [Utkarsh Raj Singh](https://www.linkedin.com/in/utkarsh-raj25/)
+
