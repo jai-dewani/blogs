@@ -1,6 +1,6 @@
 ---
 title: How to extract WiFi Passwords stored on a system using Python 
-date: "2021-01-22T02:00:00.000Z"
+date: "2021-02-07T12:00:00.000Z"
 description: "Do you know you can easily extract all the saved WiFi passwords out of a system? Let's learn how you can do this"
 ---
 
