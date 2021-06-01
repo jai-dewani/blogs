@@ -11,4 +11,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: gautamkrishnar/blog-post-workflow@master
         with:
-          feed_list: "https://blogs.jaid.tech/rss.xml"
+          feed_list: "https://jai-dewani.github.io/blogs/rss.xml"
