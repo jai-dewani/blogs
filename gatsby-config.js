@@ -6,7 +6,7 @@ module.exports = {
       summary: `who is still figuring out and developing his interest in development :p.`,
     },
     description: `A blog maintained by Jai for to blog about things he finds intresting`,
-    siteUrl: `https://blogs.jaid.tech/`,
+    siteUrl: `https://jai-dewani.github.io/blogs/`,
     social: {
       twitter: `jai_dewani`,
     },
