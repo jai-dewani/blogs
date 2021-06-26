@@ -3,6 +3,12 @@ import Wordpress2016 from "typography-theme-wordpress-2016"
 
 Wordpress2016.overrideThemeStyles = () => {
   return {
+    "a":{
+      boxShadow:`none`
+    },
+    "h3":{
+      marginBottom: `0.5rem`,
+    },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
