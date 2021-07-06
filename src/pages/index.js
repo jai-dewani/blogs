@@ -26,6 +26,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
+      <meta name="google-site-verification" content="wpr8LjBE4elEPsCd9Tcg-b4zz_DMia3nw9iOwkjMZBY" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
