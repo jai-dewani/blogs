@@ -1,7 +1,7 @@
 ---
 title: Create Your Own Whatsapp Spambot in 5 Minutes
 date: "2020-12-21T23:00:00.000Z"
-description: "Wanna Irritate your friends by creating a personalized spam bot with WhatsApp web?"
+description: "Too bored typing the same 'Notice me senapi' text to that one person? Wanna automate this process or Wanna Irritate your friends by creating a personalized spam bot for WhatsApp web by injecting javascript though console? I might have a solution for you in both case 😉"
 ---
 
 Do your friends constantly spam you just to get your attention, wanna give this pain back? Don't worry. Then this JS script got you covered. 

@@ -1,7 +1,7 @@
 ---
 title: Everything you are doing wrong with console.log
 date: "2020-11-06T06:00:00.000Z"
-description: "Most of us over utilize console.log() for debugging our Javascript but there might be a better way without using any debugging tools"
+description: "Most of us are satisfied with what console.log() provides, even if there are other console methods which might be way helpful and might increase your speen when fixing that one bug using by logging everything there is to log :p. I'll try to discuss other console method which might come handy to you"
 ---
 
 Most of us overuse console.log() for debugging Javascript instead of using a debugging tool, In my case, this is mostly because I learned the art of printing everything to check for errors while brute-forcing my way to learn how to code before someone introduced me to an actual debugging tool. Hence I tend to stick to what I am comfortable with, I think the same applies to a lot of us 😜, doesn't it?  

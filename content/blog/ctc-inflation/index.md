@@ -1,7 +1,7 @@
 ---
-title: CTC Inflation, What? Why? How? 
+title: The truth behind 43 Lakh CTC? Why is CTC Inflation?
 date: "2020-11-20T18:00:00.000Z"
-description: "Every Computer Science student has seen CTC Inflations without realizing it, Lets breakdown what it really means"
+description: "Every Engineering student has seen the headlines 'Computer Science Student' bags in a job with a CTC of 30-50 Lakhs, but what does CTC means? Do they actually get 3-4 Lakhs per month>? In this blog I will talk about CTC Inflation and how it affects what you get in hand especially when the CTC is that high"
 ---
 ![Money](./images/money.jpg)
 

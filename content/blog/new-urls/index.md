@@ -1,7 +1,7 @@
 ---
-title: New .url powered shortcuts to access the web quickly
+title: New .URL powered shortcuts to access the web quickly
 date: "2020-09-29T02:00:00.000Z"
-description: "This is a part of Google's initiative to make it easier to get to things quicker by avoiding extra steps, first"
+description: "The first time I came across these new URLs when I first saw 'repo.new' and 'gist.new' for GitHub and after searching a bit it turns our these URLs are parrt of Google's initiative to make it easier to get to things quicker by avoiding extra steps, I have compiled a list of them including some which I think can be really helpful in daily life"
 ---
 
 The .new domain was first noticed when google allowed people to quickly open a new doc by typing [doc.new](http://doc.new) after which they started the process of opening its .new-powered shortcuts to other companies.

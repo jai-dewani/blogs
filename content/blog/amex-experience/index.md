@@ -1,7 +1,7 @@
 ---
 title: Interview experience of EDA/CFR Capabilities American Express On-Campus 
 date: "2020-09-18T10:00:00.000Z"
-description: "No one told me I needed soft skills and personality other than my technical skills"
+description: "No one told me I needed soft skills and personality other than my technical skills. I thought just coding straight for 4 years in your hostel room would be enough to get a good job, those people lied to me :/"
 ---
 
 ![Interviewing](frustrated.jpg)

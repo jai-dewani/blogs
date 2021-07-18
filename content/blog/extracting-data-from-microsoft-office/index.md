@@ -1,7 +1,7 @@
 ---
 title: Extracting Images, Audio and Videos from Microsoft Office files 
 date: "2020-12-15T18:00:00.000Z"
-description: "Microsoft office files are ZIP files under the hood, every tried unzipping them?"
+description: "It was a shocker to me when I got to know Microsoft office files bascially are ZIP files under the hood. You also didn't? Try unzipping them and you will see the magic, also the fact that you can easily extract all media out of them once we know this"
 ---
 
 Around 2007, Microsoft switched from their proprietary binary format DOC, PPT, XLS, etc to an open format which stores data as a collection of XML files all zipped together with everything from media to template information to how the text is to be formated. These new formats came with new extensions DOC**X**, PPT**X**, XLS**X**, etc where **X** stands for XML and allows this format to be more open and accessible, allowing this format to be parsed and understood by any other software that wishes to parse it and with this DOCX is the most used and popular standard. The same goes for other Microsoft formats. 

@@ -1,7 +1,7 @@
 ---
-title: Converting .pcap to .csv using 
+title: Converting .pcap to .csv using command line
 date: "2020-10-06T18:00:00.000Z"
-description: "Even after searching the whole web I couldn't find one simple way to convert PCAP files to CSV ones, until my friend told me about this "
+description: "In my deep learning project when was asked to train a model on network traffic to classify malicious packects from non malicious ones. The first step was to convert PCAP files to CSV for easy data injestion, which I have covered in this blog"
 ---
 
 PCAP files are mostly used to store captured network traffic, but they aren't the best for doing analysis. Hence the first step before doing any analysis is to convert them to CSV format yet there isn't a standard or a simplified way to do so, hence I am sharing what I have scavenged from the web while doing my project which was Implimenting the paper [Deep Packet: A Novel Approach For Encrypted Traffic Classification Using Deep Learning](https://arxiv.org/pdf/1709.02656.pdf)

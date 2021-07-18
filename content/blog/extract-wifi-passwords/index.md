@@ -1,7 +1,7 @@
 ---
-title: How to extract WiFi Passwords stored on a system using Python 
+title: How to extract all WiFi Passwords with a single python script
 date: "2021-02-07T12:00:00.000Z"
-description: "Do you know you can easily extract all the saved WiFi passwords out of a system? Let's learn how you can do this"
+description: "Did you know that all the Wifi Passwords you type in a windows machine are stored locally and you can extract them all with just a few lines on command line. What's better is this can be automated by using python which allows us to exectue execute intructions on command line. Let's see how we can this as well "
 ---
 
 Before starting anything I just wanna say (obligatory), **This is all for educational purpose and shouldn't be used for harming anyone**

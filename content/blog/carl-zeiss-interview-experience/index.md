@@ -1,7 +1,7 @@
 ---
-title: Carl Zeiss Interview Experience - FullStack Developer
+title: Carl Zeiss Interview Experience - FullStack Intern
 date: "2021-01-01T22:00:00.000Z"
-description: "My experience while giving interviews and test for Carl Zeiss which came to our campus"
+description: "My experience of taking part in on-campus placement for the position of FullStack Intern at Carl Zeiss"
 ---
 
 Carl Zeiss came to IIIT Naya Raipur with 3 positions 

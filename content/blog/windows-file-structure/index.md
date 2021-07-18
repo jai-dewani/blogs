@@ -1,8 +1,7 @@
 ---
 title: Windows file explorer being overprotective
 date: "2021-01-07T02:00:00.000Z"
-description: "Almost every windows user must have got an error while adding certain punctuations in a file or folder name. Why is windows exp
-"
+description: "I belive after using widows for a considerable time almost every one must have got an error saying you can't name a folder or file with certain character. Most of them have a very detailed reason why this limitation had to be built in, some less obious than others"
 ---
 
 ![Desktop OS market Share](./images/OSper.png)
