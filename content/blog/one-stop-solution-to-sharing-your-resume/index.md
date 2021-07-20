@@ -1,36 +1,36 @@
 ---
-title: Your one stop solution to sharing your resume with evryone
+title: Your one stop solution to sharing your resume with everyone
 date: "2021-07-16T02:00:00.000Z"
-description: "Have you ever filled out a recruitment form where you had to provide a URL to your resume and after submiting the form you realise you can add an achivement or two of yours but then you would have to share the link to the update resume which you can't do. Let's see how you can solve this problem"
+description: "Have you ever filled out a recruitment form where you had to provide a URL to your resume and after submitting the form you realise you can add an achievement or two of yours but then you would have to share the link to the updated resume which you can't do. Let's see how you can solve this problem"
 ---
 
 
 Things I am going to cover: 
 
-→ Hosting your resume hassle free  
+→ Hosting your resume hassle-free  
 → How to use your [github.io](http://github.io) domain instead of random google drive links   
-→ Update your resume with easy commits on the same URL 
+→ Update your resume with easy commits without changing the URL 
 
-> You can checkout my [template repository](https://github.com/jai-dewani/resume) for yourself and start using it with just one click
+> You can checkout my [template repository](https://github.com/jai-dewani/resume) and start using it with just one click
 
 ![GitHub @jai_dewani/resume](github.jpeg)
 
 ## The Problem
 
-It has been a reoccurring problem in my life, where suppose I am filling a form where I am asked to provide a link pointing to my **latest** resume (emphasis on latest, cause of most of these forms were to be shared with HRs and recruiters so you want all the latest achievements there), and till very  recent I used Google Drive to upload and then create a sharable link to do so, 
+It has been a reoccurring problem in my life, where suppose I am filling a form where I have been asked to provide a URL pointing to my **latest** resume (emphasis on the latest, cause most of these forms were to be shared with HRs and recruiters so you want all the latest achievements there), and everyone like I used Google Drive to easily share there resume by creating a sharable link.
 
-And most often than not my slow brain would think of that **one** important thing I missed or I might a mail next day saying I won a big hackathon (lol, like that is going to happen) or I got selected into a prestige program. Now I need this information to be there on that resume, so what should I do? So finally I found a good enough solution for this. 
+But most often than not my slow brain would think of that **one** important thing I missed out on in my resume or say I got selected into a prestigious program just days after filling this forum. Now I need this information to be there on that resume accessible from the same URL, so what should I do? But now I think I have a way to solve this problem using GitHub and GitHub Actions
 
 ## The Solution
 
-Before I explain my solution, My Resume is written in latex which I need to compile to generate my resume in PDF so I have incorporated that step as well to save my 10 seconds which I waste on compiling 😂 but you can skip that step and directly push your pdf instead of latex files though you might need to remove all the compiling features from the .yaml workflow file. Don't hesitate to reach out to me on twitter [@jai_dewani](www.twitter.com/jai_dewani) if you need any help customizing this repository to your need.  
+Before I explain my solution, let me preface that my resume is written in latex which I need to compile to generate my resume in PDF format so I have incorporated that step as well to save my 10 seconds which otherwise I would have wasted on compiling 😂 but you can skip that step if you don't use latex to generate your resume and directly push your pdf instead of latex files into master branch though you might need to remove all the latex compiling steps from the GitHub actions. Don't hesitate to reach out to me on Twitter [@jai_dewani](www.twitter.com/jai_dewani) if you need any help customizing this repository to your need.  
 
 Here is what my solution is: 
 
 - Create a repository named `resume`  
 - Commit all the required latex files into the main branch  
 - Commit an `index.html` which when hit should redirect you to your resume.
-So theoretically you could just share the URL `<github-username>.github.io/resume` and it will redirect the person to `<github-username>.github.io/resume/Resume-<name>.pdf`. Here is what that HTML looks like 
+So theoretically you could just share the URL `<github-username>.github.io/resume` and it will redirect the person to `<github-username>.github.io/resume/resume.pdf`. Here is what that HTML looks like 
 
 ```html
 <!DOCTYPE html>
@@ -53,26 +53,26 @@ location.href = "https://jai-dewani.github.io/resume/resume.pdf";
 
 
 
-- Create a GitHub workflow that would move this file to the `gh-pages` with the`index.html` file as well cause that file would be hit if anyone tried to visit `<github-username>.github.io/resume` so we need to redirect them to `<github-username>.github.io/resume/Resume-<name>.pdf` which the html file can do for us. 
+- Create a GitHub workflow that would move this file to the `gh-pages` with the `index.html` file as well cause this is the file responsible for redirecting the user from `<github-username>.github.io/resume` to `<github-username>.github.io/resume/resume.pdf`
 
-- Enable GitHub pages for `gh-pages` so as to host all the files in that branch on your `<github-username>.github.io/resume` URL.
+- Enable GitHub pages for `gh-pages` to host all the files in that branch on your `<github-username>.github.io/resume` URL.
 
 Now when you share the URL to the repo `<github-username>.github.io/resume` and it will redirect the person to your resume `<github-username>.github.io/resume/Resume-<name>.pdf` or you could share the pdf link directly, totally an aesthetic choice. 
 
 Some advantages of this are:
 
-- Since you are using a GitHub repository, it should be easy to override the PDF resume, make a commit, push on master branch and the GitHub action would make all the changes required in the `gh-pages` branch
+- Since you are using a GitHub repository, it should be easy to override the PDF resume, make a commit, push on main branch and the GitHub action would make all the changes required and push them to the `gh-pages` branch
 
-- The URL that you would share for resume will have your github-username as well so it would help create a different identity of you compared to most resume links which are just long-ass Google Drive links. 
+- The URL that you would share for resume will have your GitHub username as well so it would help create a different identity of you compared to most resume links which are just long-ass Google Drive links. 
 
-I think I now have a permanent solution to this problem which I personally like (cause came up with this idea on my own :p, other people could be using this same strategy but it just poped up in my head during shower, the place every good idea originated xD)
+I think I now have a permanent solution to this problem which I personally like will use till I find something even better xD
 
-PS: You even connect the main branch of your repo to overleaf after connecting your github to overleaf for update the latex file from overleaf only which provides you an almost live rendered version of your latex and push from there to your repo which would then compile the latex file and push the PDF into `gh-pages` branch.
+PS: You even connect the main branch of your repo to overleaf after connecting your GitHub to overleaf to update the latex file from overleaf only which provides you an almost live rendered version of your latex and push from there to your repo which would then compile the latex file and push the PDF into `gh-pages` branch. 
 
 Did I just spend 4 hours solving a problem that takes 10 mins manually? Yes. 
 and I would do that again if required, every time 😂
 
-> PS: You can checkout my resume at [https://jai-dewani.github.io/resume](https://jai-dewani.github.io/resume)
+> PS: You can check out my resume at [https://jai-dewani.github.io/resume](https://jai-dewani.github.io/resume)
 
 ## Update
 
@@ -101,9 +101,9 @@ I am now using iframe to render the pdf on the `<github-username>.github.io/resu
 </html>
 ```
 
-I haven't used PDF.js yet because I think people feel comfortable in whatever PDD engine their browser is using cause they are used to by now.
+For the people who might be thinking why I haven't used PDF.js yet is because I think people feel comfortable in whatever PDF engine their browser is using cause, they are used to it by now and I don't want to introduce javascript to this solution unless it's really necessary.
 
-Do let me know if there is anything missing or something I more which I can add on to this to make it better cause the base idea was mine but a lot of small things that you see here were suggested to me by other people
+Do let me know if there is anything I missed out on that we can do to make this workflow more seamless cause the base idea was mine but a lot of small things that you see here were suggested to me by other people
 
 Credits: 
 
