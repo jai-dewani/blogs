@@ -53,7 +53,57 @@ location.href = "https://jai-dewani.github.io/resume/resume.pdf";
 
 
 
-- Create a GitHub workflow that would move this file to the `gh-pages` with the `index.html` file as well cause this is the file responsible for redirecting the user from `<github-username>.github.io/resume` to `<github-username>.github.io/resume/resume.pdf`
+- Create a GitHub workflow that would move this file to the `gh-pages` with the `index.html` file as well cause this is the file responsible for redirecting the user from `<github-username>.github.io/resume` to `<github-username>.github.io/resume/resume.pdf`. After testing various ways to do the same thing, I have settled on this workflow which compiles all the latex, creates a build folder and moves everything necessary to it, and pushed the build folder to `gh-pages` branch
+```yml
+name: Compile and upload résumé PDF
+on:
+    push:
+        branches:
+            - "main"
+        paths:
+            - "resume.tex"
+            - "index.html"
+            - ".github/workflows/**"
+    pull_request:
+        branches:
+            - "main"
+        paths:
+            - "resume.tex"
+            - "index.html"
+            - ".github/workflows/**"
+
+jobs:
+    build_latex:
+        runs-on: ubuntu-latest
+        container:
+            image: danteev/texlive:latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+              with:
+                  persist-credentials: false
+
+            - name: Compile LaTeX document
+              uses: xu-cheng/latex-action@v2
+              with:
+                  root_file: resume.tex
+
+            - name: Post Processing
+              run: |
+                  mkdir build 
+                  cp *.pdf build/ 
+                  cp index.html build/
+                  
+            - name: Git add
+              run: git add resume.pdf
+              
+            - name: Deploy to GitHub Pages
+              uses: JamesIves/github-pages-deploy-action@4.1.4
+              with:
+                  BRANCH: gh-pages
+                  FOLDER: build
+                  CLEAN: true
+```
 
 - Enable GitHub pages for `gh-pages` to host all the files in that branch on your `<github-username>.github.io/resume` URL.
 
