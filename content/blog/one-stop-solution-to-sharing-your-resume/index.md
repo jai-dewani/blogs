@@ -13,7 +13,7 @@ Things I am going to cover:
 
 > You can checkout my [template repository](https://github.com/jai-dewani/resume) and start using it with just one click
 
-![GitHub @jai_dewani/resume](github.jpeg)
+![GitHub @jai_dewani/resume](images/github.jpeg)
 
 ## The Problem
 
