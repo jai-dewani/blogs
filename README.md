@@ -1,5 +1,4 @@
-![CI](https://github.com/jai-dewani/blogs/workflows/CI/badge.svg?branch=master)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/25119c66-88df-41cc-977a-8b04c1230825/deploy-status)](https://app.netlify.com/sites/blog-jaid/deploys)
+![CI](https://github.com/jai-dewani/blogs/workflows/CI/badge.svg?branch=master)loys)
 
 
 <h1 align="center">
