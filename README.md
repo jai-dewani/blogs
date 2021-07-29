@@ -7,11 +7,11 @@
 
 ### Recent Blog Posts
 <!-- BLOG-POST-LIST:START -->
-- [How to extract WiFi Passwords stored on a system using Python](https://blogs.jaid.tech/extract-wifi-passwords/)
-- [Windows file explorer being overprotective](https://blogs.jaid.tech/windows-file-structure/)
-- [Carl Zeiss Interview Experience - FullStack Developer](https://blogs.jaid.tech/carl-zeiss-interview-experience/)
-- [Create Your Own Whatsapp Spambot in 5 Minutes](https://blogs.jaid.tech/automate-whatsapp/)
-- [Extracting Images, Audio and Videos from Microsoft Office files](https://blogs.jaid.tech/extracting-data-from-microsoft-office/)
+- [Your one stop solution to sharing your resume with everyone](https://jai-dewani.github.io/blogs/one-stop-solution-to-sharing-your-resume/)
+- [How to extract all WiFi Passwords with a single python script](https://jai-dewani.github.io/blogs/extract-wifi-passwords/)
+- [Windows file explorer being overprotective](https://jai-dewani.github.io/blogs/windows-file-structure/)
+- [Carl Zeiss Interview Experience - FullStack Intern](https://jai-dewani.github.io/blogs/carl-zeiss-interview-experience/)
+- [Create Your Own Whatsapp Spambot in 5 Minutes](https://jai-dewani.github.io/blogs/automate-whatsapp/)
 <!-- BLOG-POST-LIST:END -->
 
 <h1 align="center">
