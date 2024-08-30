@@ -1,6 +1,6 @@
 ---
 title: IEnumerable execution is deferred 
-date: "2020-11-20T18:00:00.000Z"
+date: "2024-08-30T18:00:00.000Z"
 description: "This is an interesting story about how the 1% of the time when you don't know what you're doing can come back to bite you. This is when I learned about the concept of deferred execution in C#, including its effects on performance, memory efficiency, and composition, as well as the differences between IEnumerable and List"
 ---
 
