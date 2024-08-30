@@ -76,9 +76,9 @@ foreach (var value in waitingParagraph)
 Console.WriteLine($"Time taken - {stopwatch.Elapsed}"); // Around 00:00:02.6724506
 ```
 
-In this example, even though we're using `Thread.Sleep` in the `.Select` projection, the processing isn't executed until we start iterating over all the elements one by one. Hence the stopwatch shows the execution time of looping over the elements takes more than 2 seconds but actually this is where the `.Select` command is being executed when each element is requested.
+In this example, even though we're using `Thread.Sleep` within the `.Select` projection, the processing isn't executed until we start iterating over all the elements one by one. As a result, the stopwatch shows that looping over the elements takes more than 2 seconds, but this is actually the time spent executing the `.Select` command for each element as it is requested.
 
-A fun usecase of this could be, creating a typing awareness animation by introducing randomness in the `Thread.Sleep` time to achieve the desired effect.
+A fun use case for this could be creating a typing awareness animation by introducing randomness into the `Thread.Sleep` time to achieve the desired effect.
 
 ![typing awareness animation](./media/WindowsTerminal_U4dYkwMC6t.gif)
 
