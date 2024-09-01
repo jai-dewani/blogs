@@ -85,7 +85,7 @@ for(looper=0;looper<count;looper++)
 ```
 Now the user can enter the message the loop count in alert boxes and the result should look something like this   
 
-![](images/repeat.JPG)
+![](images/repeat.jpg)
 
 ### 🐾 Extra bit
 This is just the starting, you can customize this script in several ways to do different tasks like how I change a few things so now this script takes in a message and sends each word as a separate message, just because I hate when people do this to me. Why can't you people send the whole message together? -_-
