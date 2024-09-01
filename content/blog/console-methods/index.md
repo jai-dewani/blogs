@@ -25,14 +25,14 @@ Here is an example illustrating the difference between them
 ## Console.table()
 The table() method will print everything in a table format (except numbers and strings because they don't need a table 😝). The table also provides a lot of the option of an excel sheet, like sorting data in ascending or descending for any column. It not only supports arrays of any dimension but all sorts of objects and the clear visibility it provides in tabular form can be very helpful when working with large objects/data.
 
-![Console.table](./images/table.JPG)
+![Console.table](./images/table.jpg)
 
 ## Console.trace() 
 Like any other error trace you must have seen, the trace() method can print out a complete trace to the console. You can pass in any object or even a custom message which will be printed out similar to a console.log() but along with it will be a trace of calls that lead to the execution of that statement.  
 
 This is a good tool say when working on a project where the same function is being used in a lot of places and you want to know which part of your project is making a bad call to that function causing problems and sleepless nights :) The call trace can be very helpful in similar cases and for the internal development process
 
-![Console.trace](./images/trace.JPG)
+![Console.trace](./images/trace.jpg)
 
 ## Console.assert(assertion,message) 
 The assert() method logs out an error if the expression passed inside it evaluates to false but won't log anything if the expression evaluates to true.  

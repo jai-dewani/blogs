@@ -20,7 +20,7 @@ Extensions are just a fancy codeword for your operating system to help him under
 Open your Docx, Pptx, or any MS Office file in a text editor which should display it in hexadecimal format. Look up the first 4 bytes (8 characters) which should be `504b 0304` and lookup the [Signature of Zip files](https://filesignatures.net/index.php?page=search&search=ZIP&mode=EXT). **They both match!** Hence internally both the files are the same, the only difference is caused by the OS assigning different software to open a file depending on the extension at the end of the filename. 
 
 
-![](./images/text-file.JPG)
+![](./images/text-file.jpg)
 
 Enough analyzing, let's get inside this mess!
 
@@ -30,14 +30,14 @@ Enough analyzing, let's get inside this mess!
 
 
 Open any Zip Programs like 7-Zip or WinZip and select an MS Office file and choose `Extract to` and select the location where you want to unzip the file. 
-![](images/unzip.JPG)
+![](images/unzip.jpg)
 
 ### How Media is stored in MS Office files
 What makes this new format open is that the images, videos, and anything media are stored as it is in the media folder as visible in the folder structure below. 
 
 What makes this even better is that all the text and meta-information is stored in XML format which can be ready openly and parsed easily after understanding the format of XML which is universal for each MS Office file. **Just copy and paste all the media and your work is done!**
 
-![](images/folder.JPG)
+![](images/folder.jpg)
 
 
 

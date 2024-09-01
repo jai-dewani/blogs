@@ -350,7 +350,7 @@ node index.js
 ```
 Now go to your browser and open `localhost:8080` and hopefully you'll see something like 
 
-![Index page](./images/index.JPG)
+![Index page](./images/index.jpg)
 
 Make sure that you close the server by pressing `Ctrl + C` and restart it to any changes you make on `index.js`
 
@@ -451,7 +451,7 @@ A search page that will show the top 5 videos from your search result, you can i
 
 Run your project and go to `localhost:8080` and try searching for something in the search bar. Hopefully, you'll see something like 
 
-![Search Page](./images/search.JPG)
+![Search Page](./images/search.jpg)
 
 *Like what you see? Xd*
 

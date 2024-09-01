@@ -12,19 +12,19 @@ Also that this can easily be done in any language that allows you to execute com
 
 Press `Win + R` and type `cmd` in the input box next to `run: ` and press enter 
 
-![](./images/Zero.JPG)
+![](./images/Zero.jpg)
 
 ## Show all the saved profiles in your system 
 
 Type `netsh wlan show profiles` and press enter. This should show all the Wifi Profiles saved on your system
 
-![](./images/One.JPG)
+![](./images/One.jpg)
 
 ## Details about a specific WiFi Profile
 
 Enter `netsh wlan show profile <profile>` and replacing `<profile>` with the name of the profile you want to get details about 
 
-![](./images/Two.JPG)
+![](./images/Two.jpg)
 
 You can see `Security key: Present` in the `Security Settings` Section but it isn't showing the password. For that, we will have to pass in a parameter of `key=clear`. 
 
@@ -33,7 +33,7 @@ You can see `Security key: Present` in the `Security Settings` Section but it is
 `netsh wlan show profile <profile> key=clear`
 
 And voila 🥳🎊 We have the password in the `Key Content` Field just below `Security key: Present`
-![](./images/Three.JPG)
+![](./images/Three.jpg)
 
 The problem you can see here is that you will have to run this statement for each WiFi Profile and it might take some time to do this manually. Might just be the difference between you walking away with all passwords or getting caught in the act xD 
 

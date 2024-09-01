@@ -25,7 +25,7 @@ Can't. They are used to access contents inside a certain folder, so windows migh
 
 You wish. They are used to denote a drive letter which is usually at the beginning of a file path to tell windows which drive to look into for specific content. Hence having the ability to name a folder `E:` can cause problems though technically solving this challenge isn't hard but maybe windows skipped this to avoid confusion in the mind of users who aren't very technical but still depend on a computer for critical tasks.
 
-![Drive letters](./images/drives.JPG)
+![Drive letters](./images/drives.jpg)
 
 ### If not backward slash `\` then maybe forward slash `/` can be used?
 
@@ -35,10 +35,10 @@ Naah, Windows allows users to have shortcuts that can point to a website that mi
 
 Nope. If allowed it can cause problems because `?` can be used as a wildcard while searching in file explorer. Consider this example where I am searching for all folders that have `power` in their name 
 
-![wildcard search in windows explorer](./images/search.JPG)
+![wildcard search in windows explorer](./images/search.jpg)
 
 The same goes with `*`. 
-![Use of asterisk for specific file types](./images/star.JPG)
+![Use of asterisk for specific file types](./images/star.jpg)
 
 
 ### I love "using" quotes 

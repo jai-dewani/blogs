@@ -80,7 +80,7 @@ In this example, even though we're using `Thread.Sleep` within the `.Select` pro
 
 A fun use case for this could be creating a typing awareness animation by introducing randomness into the `Thread.Sleep` time to achieve the desired effect.
 
-![typing awareness animation](./media/WindowsTerminal_U4dYkwMC6t.gif)
+![typing awareness animation](./images/WindowsTerminal_U4dYkwMC6t-ezgif.com-resize.gif)
 
 ## Difference Between Deferred Execution in IEnumerable and a List in C#
 
