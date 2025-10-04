@@ -1,6 +1,6 @@
 ---
 title: Is “Composition over Inheritance” Hard in C#?
-date: "2024-08-30T18:00:00.000Z"
+date: "2025-10-02T20:00:00.000Z"
 description: "Exploring why C# makes inheritance effortless with simple syntax while composition requires extensive boilerplate code for method delegation. A look at how other languages like Go and Kotlin solve this problem and what strategies C# developers use to work around these limitations."
 ---
 
