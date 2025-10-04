@@ -116,7 +116,3 @@ Others have suggested a hybrid approach: use composition for flexible behaviors,
 Composition often produces cleaner, more modular code. But in C#, it comes at a cost: inheritance is one line, composition is 30 lines of boilerplate.
 
 Until the language itself adds built-in delegation or mixin support, “prefer composition over inheritance” will remain easier said than done.
-
-## Source:
-
-- 
