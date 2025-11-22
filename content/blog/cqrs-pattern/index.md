@@ -1,3 +1,9 @@
+---
+title: CQRS - Split Personality Disorder for Your Data (And Why That's Actually Good)
+date: "2025-11-22T16:00:00.000Z"
+description: "Ever notice how trying to optimize for both reading and writing data gets messy? CQRS solves this by splitting them into separate models, each doing what it does best without compromising the other."
+---
+
 # Introduction to the CQRS Pattern
 CQRS splits things up: one model for commands (writes), another for queries (reads). Your read side can be super fast and tailored for how people use your data, while your write side focuses on keeping everything correct and consistent. Bottom line: stick with CRUD for straightforward apps, but consider CQRS if you're hitting pain points with performance, complexity, or scaling. 
 
