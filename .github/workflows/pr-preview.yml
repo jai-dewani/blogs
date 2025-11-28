@@ -18,7 +18,7 @@ jobs:
           node-version: '18'
           
       - name: Install dependencies
-        run: npm ci
+        run: npm ci 
         
       - name: Build Gatsby for PR Preview
         run: npm run build -- --prefix-paths --path-prefix="/preview/pr-${{ github.event.number }}"

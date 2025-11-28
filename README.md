@@ -5,6 +5,10 @@
   Blogs by JaiD
 </h1>
 
+## Technical notes: 
+
+- We use `yarn` instead of `npm` to handle node pacakges.
+
 ### Recent Blog Posts
 <!-- BLOG-POST-LIST:START -->
 - [Your one stop solution to sharing your resume with everyone](https://jai-dewani.github.io/blogs/one-stop-solution-to-sharing-your-resume/)
