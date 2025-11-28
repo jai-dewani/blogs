@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/blogs",
+  pathPrefix: process.env.PATH_PREFIX || "/blogs",
   siteMetadata: {
     title: `Blogs by JaiD`,
     author: {
