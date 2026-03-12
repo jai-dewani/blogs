@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql, withPrefix } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -40,7 +40,7 @@ const BlogIndex = ({ data, location }) => {
               >
                 <header>
                   <h2>
-                    <Link to={post.fields.slug} itemProp="url">
+                    <Link to={withPrefix(post.fields.slug)} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
