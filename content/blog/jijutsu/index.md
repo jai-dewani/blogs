@@ -1,8 +1,8 @@
 ---
-title: Jujutsu: A Fresh Take on Version Control That Might Just Change How You Code
+title: "Jujutsu: A Fresh Take on Version Control That Might Just Change How You Code"
 date: "2026-03-12T23:00:00.000Z"
 description: "Discover Jujutsu (jj) - a modern version control system that aims to fix Git's quirks while keeping you productive. Perfect for developers tired of Git's complexity."
-----
+---
 
 Have you ever found yourself Googling "how to undo Git merge" for the hundredth time? Or spent way too long trying to figure out why your Git history looks like a bowl of spaghetti? Well, you're not alone, and there might be a solution on the horizon.
 
