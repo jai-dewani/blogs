@@ -15,9 +15,7 @@ Meet **Jujutsu** (pronounced "joo-joot-su" and often shortened to `jj`) - a vers
 
 ## What is Jujutsu?
 
-Jujutsu is Google’s take on version control, but honestly, I just think of it as 'Git with an Undo button.' I’ve been messing with it on a side project for a week, and there are some good ideas worth considering. 
-
-The key difference? Where Git punishes you for experimenting (one wrong `reset --hard` and your afternoon is gone 💀), Jujutsu is designed to let you mess around freely and undo basically anything without consequences.
+Jujutsu is a new take on version control, from the little I understand it works as a UI layer providing some very new ideas to someone who has only ever used Git his whole life. 
 
 Full disclosure: It's only been about a week now. I'm not some power user who's migrated their entire workflow — I'm still in the "ooh this is nice" phase. But even in that short time, there have been enough moments where I thought "This sure is one step ahead" that I felt like writing about it.
 
@@ -47,12 +45,13 @@ Git has `checkout`, `switch`, `restore`, and `reset` — four commands that all 
 
 The other big thing is that Git treats your working directory and your commits as separate concepts. You make changes, you stage them, you commit them — three steps. Jujutsu collapses this. Your working directory is always a commit that's being updated in real-time. It sounds weird at first but once you get used to it, going back to `git add` feels unnecessarily tedious.
 
-As for **SVN** and **Mercurial** — if you're still using those, Jujutsu borrows the good parts (Mercurial's friendliness, SVN's simplicity) without the limitations. But honestly if you're on SVN in 2026, you have bigger plans than which VCS to switch to 😅
+As for SVN and Mercurial — if you're still using those, Jujutsu borrows the good parts (Mercurial's friendliness, SVN's simplicity) without the limitations. But honestly if you're on SVN in 2026, you have bigger plans than which VCS to switch to 😅
 
 _Hint_ - Jujustsu works as a UI layer, read more to understand how.
 
 **The Trade-offs though:**
-Jujutsu is new but introduces a lot of interesting ideas on how Version Control can be done differently. Yet this is all new so the people who can help you from a sticky situation are also few. No fancy GUI clients, limited IDE integration, and good luck convincing your teammates who spent their last decade learning how to stop making mistakes in `git`. But for personal projects or if you're starting something new? Worth a shot.
+
+Jujutsu is new but introduces a lot of interesting ideas on how Version Control can be done differently. Yet this is all new so the people who can help you from a sticky situation are also few. No fancy GUI clients, limited IDE integration or at times I found VSCode fighting against JJ, making my day a bit harder and good luck convincing your teammates who spent their last decade learning how to stop making mistakes in `git`. But for personal projects or if you're starting something new? Worth a shot.
 
 ## Fits right in with your existing Git History
 
@@ -68,7 +67,7 @@ I literally `cd`'d into one of my existing repos and started running `jj` comman
 
 ## A Quick Note on AI + Version Control
 
-I don't have months of experience combining `jj` with Copilot or anything, so don't quote me on this - But one thing I've noticed is that when AI assistants suggest big changes across multiple files, the ability to just undo everything cleanly is really nice. With Git I'd usually create a throwaway branch, let the AI go wild, and then cherry-pick what I liked. With `jj` it's more fluid — try the change, don't like it, undo, try something else. Less branch management overhead for what is essentially "let me see if this AI suggestion is any good."
+I don't have months of experience combining `jj` with Copilot or anything, so don't quote me on this - But one thing I've noticed is that when AI assistants suggest big changes across multiple files, the ability to just undo everything cleanly is really nice. The same can be done with `git` but it comes with years of being afraid to do `git reset` for me. With `jj` it's more easy to try the change, don't like it, undo, try something else. Less effort overhead for what is essentially "let me see if this AI suggestion is any good."
 
 That said, I'm still figuring this out. If anyone has a proper workflow for this, hit me up on [Twitter](https://twitter.com/jai_dewani) because I'd love to hear about it 😄
 
