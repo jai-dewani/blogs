@@ -7,11 +7,11 @@
 
 ### Recent Blog Posts
 <!-- BLOG-POST-LIST:START -->
-- [Your one stop solution to sharing your resume with everyone](https://jai-dewani.github.io/blogs/one-stop-solution-to-sharing-your-resume/)
-- [How to extract all WiFi Passwords with a single python script](https://jai-dewani.github.io/blogs/extract-wifi-passwords/)
-- [Windows file explorer being overprotective](https://jai-dewani.github.io/blogs/windows-file-structure/)
-- [Carl Zeiss Interview Experience - FullStack Intern](https://jai-dewani.github.io/blogs/carl-zeiss-interview-experience/)
-- [Create Your Own Whatsapp Spambot in 5 Minutes](https://jai-dewani.github.io/blogs/automate-whatsapp/)
+- [Middleware in .NET: The Security Guards at Your API&#39;s Gate](https://jai-dewani.github.io/blogs/dotnet-middleware-explained/)
+- [Jujutsu: Another niche Version Control System?](https://jai-dewani.github.io/blogs/jijutsu/)
+- [Stop Overthinking .NET Hosting: WebApplication vs Host Builders Explained](https://jai-dewani.github.io/blogs/dotnet-generic-hosts/)
+- [CQRS - Split Personality Disorder for Your Data &lpar;And Why That&#39;s Actually Good&rpar;](https://jai-dewani.github.io/blogs/cqrs-pattern/)
+- [Is “Composition over Inheritance” Hard in C#?](https://jai-dewani.github.io/blogs/composition-over-inheritance-csharp/)
 <!-- BLOG-POST-LIST:END -->
 
 <h1 align="center">
