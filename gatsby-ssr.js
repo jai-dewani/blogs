@@ -17,6 +17,7 @@ exports.onRenderBody = ({ setHtmlAttributes, setPostBodyComponents }) => {
     React.createElement("script", {
       key: "goatcounter",
       "data-goatcounter": "https://jaid.goatcounter.com/count",
+      "data-goatcounter-settings": JSON.stringify({ no_onload: true }),
       async: true,
       src: "//gc.zgo.at/count.js",
     }),
