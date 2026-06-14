@@ -12,8 +12,7 @@ const ViewCounter = () => {
 
   useEffect(() => {
     const path = window.location.pathname
-    const url = `https://jaid.goatcounter.com/counter/${path}.json`
-
+    const url = `https://jaid.goatcounter.com/counter${path}.json`
     fetch(url)
       .then(res => (res.ok ? res.json() : null))
       .then(data => {
