@@ -1,0 +1,42 @@
+<svg viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <!-- Ring 3 - Outermost -->
+  <circle cx="300" cy="235" r="210" fill="#3b82f6" opacity="0.2" stroke="#3b82f6" stroke-width="2"/>
+  <text x="300" y="60" text-anchor="middle" font-size="13" fill="#3b82f6" font-weight="600">Ring 3 — User Applications</text>
+  <text x="300" y="78" text-anchor="middle" font-size="11" fill="#3b82f6" opacity="0.8">Browsers, editors, your code, etc.</text>
+
+  <!-- Ring 2 -->
+  <circle cx="300" cy="235" r="155" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="300" y="110" text-anchor="middle" font-size="13" fill="#8b5cf6" font-weight="600">Ring 2 — Device Drivers</text>
+  <text x="300" y="128" text-anchor="middle" font-size="11" fill="#8b5cf6" opacity="0.8">(mostly unused in modern OSes)</text>
+
+  <!-- Ring 1 -->
+  <circle cx="300" cy="235" r="105" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="2"/>
+  <text x="300" y="160" text-anchor="middle" font-size="13" fill="#f59e0b" font-weight="600">Ring 1 — OS Services</text>
+  <text x="300" y="178" text-anchor="middle" font-size="11" fill="#f59e0b" opacity="0.8">(mostly unused in modern OSes)</text>
+
+  <!-- Ring 0 - Innermost -->
+  <circle cx="300" cy="235" r="58" fill="#ef4444" opacity="0.25" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="300" y="225" text-anchor="middle" font-size="14" fill="#ef4444" font-weight="700">Ring 0</text>
+  <text x="300" y="243" text-anchor="middle" font-size="11" fill="#ef4444" font-weight="600">Kernel</text>
+  <text x="300" y="258" text-anchor="middle" font-size="10" fill="#ef4444" opacity="0.9">Full hardware access</text>
+
+  <!-- Annotations -->
+  <!-- Arrow from CrowdStrike to Ring 0 -->
+  <line x1="480" y1="340" x2="348" y2="260" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <polygon points="348,260 355,268 360,260" fill="#ef4444"/>
+  <rect x="410" y="330" rx="6" ry="6" width="175" height="52" fill="#ef4444" opacity="0.1" stroke="#ef4444" stroke-width="1"/>
+  <text x="498" y="350" text-anchor="middle" font-size="11" fill="#ef4444" font-weight="600">CrowdStrike on Windows</text>
+  <text x="498" y="366" text-anchor="middle" font-size="10" fill="#ef4444">runs HERE (Ring 0)</text>
+  <text x="498" y="378" text-anchor="middle" font-size="9" fill="#ef4444" opacity="0.7">crash = entire OS goes down</text>
+
+  <!-- Arrow from CrowdStrike macOS to Ring 3 -->
+  <line x1="115" y1="395" x2="175" y2="105" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <polygon points="175,105 168,114 178,114" fill="#3b82f6"/>
+  <rect x="18" y="390" rx="6" ry="6" width="175" height="52" fill="#3b82f6" opacity="0.1" stroke="#3b82f6" stroke-width="1"/>
+  <text x="106" y="410" text-anchor="middle" font-size="11" fill="#3b82f6" font-weight="600">CrowdStrike on macOS</text>
+  <text x="106" y="426" text-anchor="middle" font-size="10" fill="#3b82f6">runs HERE (Ring 3)</text>
+  <text x="106" y="438" text-anchor="middle" font-size="9" fill="#3b82f6" opacity="0.7">crash = just restart the extension</text>
+
+  <!-- Legend at bottom -->
+  <text x="300" y="480" text-anchor="middle" font-size="11" fill="#666" font-style="italic">Lower ring number = more privileges = more damage if something goes wrong</text>
+</svg>
